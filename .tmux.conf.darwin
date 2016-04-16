@@ -1,8 +1,14 @@
 # Mouse mode on!
 set-option -g mouse on
 
+# Copy/paste
 bind y run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
-bind p run "tmux paste-buffer"
+bind C-p run "tmux paste-buffer"
+
+# Easier window navigation
+bind p previous-window
+bind -n S-C-Right next-window
+bind -n S-C-Left previous-window
 
 # Smart pane switching with awareness of vim splits
 # See: https://github.com/christoomey/vim-tmux-navigator
