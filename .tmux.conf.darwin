@@ -1,7 +1,8 @@
 # Mouse mode on!
 set-option -g mouse on
 
-set -g default-terminal "screen-256color"
+bind y run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
+bind p run "tmux paste-buffer"
 
 # Smart pane switching with awareness of vim splits
 # See: https://github.com/christoomey/vim-tmux-navigator
