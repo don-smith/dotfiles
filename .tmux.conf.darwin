@@ -1,8 +1,5 @@
 # Mouse mode on!
-set -g mode-mouse on
-set -g mouse-resize-pane on
-setw -g mouse-select-pane on
-setw -g mouse-select-window on
+set-option -g mouse on
 
 set -g default-terminal "screen-256color"
 
@@ -29,6 +26,7 @@ set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @plugin 'nhdaly/tmux-scroll-copy-mode'
 
 set -g @resurrect-processes 'slurm "-i wlan0"'
 
