@@ -9,6 +9,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'guns/vim-clojure-static'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'easymotion/vim-easymotion'
@@ -41,10 +42,13 @@ set nobackup
 set hlsearch
 set ignorecase
 set smartcase
+set term=screen-256color
 set guifont="Source Code Pro for Powerline":h14
 
 let mapleader = ","
-colorscheme spacegray
+
+colorscheme Tomorrow-Night
+let g:airline_theme='tomorrow'
 
 " CtrlP
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
