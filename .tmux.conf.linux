@@ -4,7 +4,10 @@ set -g mouse-resize-pane on
 setw -g mouse-select-pane on
 setw -g mouse-select-window on
 
-set -g default-terminal "screen-256color"
+# Easier window navigation
+bind p previous-window
+bind -n S-C-Right next-window
+bind -n S-C-Left previous-window
 
 # Smart pane switching with awareness of vim splits
 # See: https://github.com/christoomey/vim-tmux-navigator
