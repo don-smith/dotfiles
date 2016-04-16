@@ -15,7 +15,8 @@ bind -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 
 # Setup the Powerline bar
 run-shell "powerline-daemon -q"
-source "/usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf"
+# Path is specific to OS X setup
+source "/Users/don/.local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf"
 
 # Turn on vi key mode and enhance copying
 set-window-option -g mode-keys vi

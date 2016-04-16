@@ -1,5 +1,3 @@
-"set nocompatible " apparently required for Vundle?
-"filetype off     " apparently required for Vundle?
 filetype plugin indent on
 
 " Plugins
@@ -9,7 +7,6 @@ Plugin 'rking/ag.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'ajh17/Spacegray.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'guns/vim-clojure-static'
@@ -21,13 +18,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 call vundle#end()
 
-" Only for OS X
-"set t_Co=256
-"color distinguished
-"colorscheme spacegray
-
 syntax on
-let mapleader = ","
 
 set number
 set expandtab
@@ -51,6 +42,47 @@ set hlsearch
 set ignorecase
 set smartcase
 set guifont="Source Code Pro for Powerline":h14
+
+let mapleader = ","
+colorscheme spacegray
+
+" CtrlP
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+set wildignore+=node_modules
+let g:ctrlp_working_path_mode = 2
+let g:ctrlp_max_files = 20000
+let g:ctrlp_max_depth = 20
+
+" Syntastic
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_javascript_checkers = ['babel-eslint', 'standard']
+autocmd bufwritepost *.js silent !standard-format -w %
+set autoread
+
+" For the powerline
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+" Change the cursor between modes (gnome-terminal)
+"if has("autocmd")
+"  au InsertEnter *
+"    \ if v:insertmode == 'i' |
+"    \   silent execute "!gnome-terminal-cursor-shape.sh ibeam" |
+"    \ elseif v:insertmode == 'r' |
+"    \   silent execute "!gnome-terminal-cursor-shape.sh underline" |
+"    \ endif
+"  au InsertLeave * silent execute "!gnome-terminal-cursor-shape.sh block"
+"  au VimLeave * silent execute "!gnome-terminal-cursor-shape.sh block"
+"endif
+
+" Change the cursor between modes (iTerm2)
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
 
 " For moving up/down in paragraphs and in edit mode
 nnoremap j gj
@@ -80,24 +112,8 @@ nmap <leader>fef ggVG=
 " Quit current file
 nmap <leader>q :bd<CR>
 
-" Change the cursor between modes (gnome-terminal)
-if has("autocmd")
-  au InsertEnter *
-    \ if v:insertmode == 'i' |
-    \   silent execute "!gnome-terminal-cursor-shape.sh ibeam" |
-    \ elseif v:insertmode == 'r' |
-    \   silent execute "!gnome-terminal-cursor-shape.sh underline" |
-    \ endif
-  au InsertLeave * silent execute "!gnome-terminal-cursor-shape.sh block"
-  au VimLeave * silent execute "!gnome-terminal-cursor-shape.sh block"
-endif
-
 " Unhighlight previous search
 nnoremap <ESC> :noh<RETURN><ESC>
-
-" For the powerline
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
 
 " Open new buffers
 nmap <leader>v :rightbelow vsp<CR>
@@ -112,7 +128,7 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-X> <C-W>q
 
 " Tab between buffers
-noremap <tab> <c-w><c-w>
+noremap <tab> :bn<CR>
 
 " Switch tabs
 nmap <leader>t :tabnew<CR>
@@ -125,17 +141,4 @@ noremap <leader>yy "*Y
 
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
-
-" CtrlP
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-set wildignore+=node_modules
-let g:ctrlp_working_path_mode = 2
-let g:ctrlp_max_files = 20000
-let g:ctrlp_max_depth = 20
-
-" Syntastic
-let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_javascript_checkers = ['babel-eslint', 'standard']
-autocmd bufwritepost *.js silent !standard-format -w %
-set autoread
 

@@ -12,18 +12,19 @@ rm ~/.vimrc
 # Create symbolic links
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-ln -s $DIR/.gitconfig ~/.gitconfig
 ln -s $DIR/.gitignore_global ~/.gitignore_global
-ln -s $DIR/.tmux.conf ~/.tmux.conf
-ln -s $DIR/.vimrc ~/.vimrc
-
-# Platform-specific
 
 UNAMESTR=`uname`
 if [[ "$UNAMESTR" == 'Linux' ]]; then
+  ln -s $DIR/.tmux.conf.linux ~/.tmux.conf
+  ln -s $DIR/.gitconfig.linux ~/.gitconfig
+  ln -s $DIR/.vimrc.linux ~/.vimrc
   ln -s $DIR/.zshrc.linux ~/.zshrc
   ln -s $DIR/.zshenv.linux ~/.zshenv
 else # OS X
+  ln -s $DIR/.tmux.conf.darwin ~/.tmux.conf
+  ln -s $DIR/.gitconfig.darwin ~/.gitconfig
+  ln -s $DIR/.vimrc.darwin ~/.vimrc
   ln -s $DIR/.zshrc.darwin ~/.zshrc
 fi
 
