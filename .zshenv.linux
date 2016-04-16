@@ -1,0 +1,18 @@
+tpon() {
+  echo "TouchPad turned on"
+  synclient TouchPadOff=0
+}
+
+tpoff() {
+  echo "TouchPad turned off"
+  synclient TouchPadOff=2
+}
+
+fixdisplay() {
+  xrandr --output eDP1 --mode 1680x1050
+  xrandr --output eDP1 --mode 1920x1080
+  xrandr --output DP1 --right-of eDP1
+}
+
+export PATH=~/bin:~/.nvm/versions/node/v4.4.2/bin:~/.pyenv/shims:~/.pyenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/opt/go/bin:~/projects/go/bin:/usr/local/packer:/usr/local/packer
+

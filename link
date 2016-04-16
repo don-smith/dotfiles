@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Remove existing links
+
+rm ~/.gitconfig
+rm ~/.gitignore_global
+rm ~/.tmux.conf
+rm ~/.zshenv
+rm ~/.zshrc
+rm ~/.vimrc
+
+# Create symbolic links
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ln -s $DIR/.gitconfig ~/.gitconfig
+ln -s $DIR/.gitignore_global ~/.gitignore_global
+ln -s $DIR/.tmux.conf ~/.tmux.conf
+ln -s $DIR/.vimrc ~/.vimrc
+
+# Platform-specific
+
+UNAMESTR=`uname`
+if [[ "$UNAMESTR" == 'Linux' ]]; then
+  ln -s $DIR/.zshrc.linux ~/.zshrc
+  ln -s $DIR/.zshenv.linux ~/.zshenv
+else # OS X
+  ln -s $DIR/.zshrc.darwin ~/.zshrc
+fi
+
+echo "All linked up."
+

@@ -1,0 +1,9 @@
+[user]
+	name = Don Smith
+	email = locksmithdon@gmail.com
+[credential]
+	helper = cache
+[push]
+	default = matching
+[core]
+  excludesfile = ~/.gitignore_global
