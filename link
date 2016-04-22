@@ -13,6 +13,7 @@ rm ~/.vimrc
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ln -s $DIR/.gitignore_global ~/.gitignore_global
+ln -s $DIR/.tern-project ~/.tern-project
 
 UNAMESTR=`uname`
 if [[ "$UNAMESTR" == 'Linux' ]]; then
