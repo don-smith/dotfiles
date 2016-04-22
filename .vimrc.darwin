@@ -107,6 +107,9 @@ function! NumberToggle()
 endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
 
+" Toggle Syntastic
+map <leader>st :SyntasticToggleMode<cr>
+
 " An easy escape
 :imap jj <Esc>
 
