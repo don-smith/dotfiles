@@ -19,7 +19,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 call vundle#end()
 
@@ -75,9 +74,6 @@ autocmd BufWritePost *.js
 " For the powerline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-
-" YouCompleteMe
-let g:ycm_python_binary_path = '/Users/don/.pyenv/shims/python'
 
 " Change the cursor between modes (iTerm2)
 if exists('$TMUX')
