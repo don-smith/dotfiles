@@ -4,6 +4,7 @@
 
 rm ~/.gitconfig
 rm ~/.gitignore_global
+rm ~/.tern-config
 rm ~/.tmux.conf
 rm ~/.zshenv
 rm ~/.zshrc
@@ -22,7 +23,7 @@ if [[ "$UNAMESTR" == 'Linux' ]]; then
   ln -s $DIR/.vimrc.linux ~/.vimrc
   ln -s $DIR/.zshrc.linux ~/.zshrc
   ln -s $DIR/.zshenv.linux ~/.zshenv
-else # OS X
+else # Darwin (OS X)
   ln -s $DIR/.tmux.conf.darwin ~/.tmux.conf
   ln -s $DIR/.gitconfig.darwin ~/.gitconfig
   ln -s $DIR/.vimrc.darwin ~/.vimrc
