@@ -17,6 +17,7 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -76,9 +77,9 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 " YouCompleteMe
-let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
+let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
-" Change the cursor between modes (gnome-terminal)
+" Change the cursor between modes
 autocmd InsertEnter *
   \ if v:insertmode == 'i' |
   \   silent execute "!gnome-terminal-cursor-shape.sh ibeam" |
@@ -105,13 +106,16 @@ function! NumberToggle()
     set nornu
   endif
 endfunc
-nnoremap <C-n> :call NumberToggle()<cr>
+nnoremap <C-n> :call NumberToggle()<CR>
 
 " Toggle Syntastic
-map <leader>st :SyntasticToggleMode<cr>
+map <leader>st :SyntasticToggleMode<CR>
 
 " An easy escape
 :imap jj <Esc>
+
+" NERDTree toggle
+map <C-t> :NERDTreeToggle<CR>
 
 " Format the entire file
 nmap <leader>fef ggVG=
@@ -125,7 +129,7 @@ nnoremap <ESC> :noh<RETURN><ESC>
 " Open new buffers
 nmap <leader>v :rightbelow vsp<CR>
 nmap <leader>h :rightbelow sp<CR>
-nmap <leader>o :only<cr>
+nmap <leader>o :only<CR>
 
 " Splits
 nnoremap <C-J> <C-W><C-J>
