@@ -71,9 +71,12 @@ autocmd BufWritePost *.js
   \   set autoread |
   \ endif
 
-" For the powerline
+" Powerline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+
+" YouCompleteMe
+let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
 
 " Change the cursor between modes (gnome-terminal)
 autocmd InsertEnter *

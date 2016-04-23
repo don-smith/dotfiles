@@ -17,6 +17,7 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -71,9 +72,12 @@ autocmd BufWritePost *.js
   \   set autoread |
   \ endif
 
-" For the powerline
+" Powerline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+
+" YouCompleteMe
+let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
 
 " Change the cursor between modes (iTerm2)
 if exists('$TMUX')
