@@ -61,10 +61,6 @@ source $(brew --prefix nvm)/nvm.sh
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# For the .NET Version Manager
-source dnvm.sh
-export MONO_MANAGED_WATCHER=disabled
-
 # Customize to your needs...
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:/usr/local/git/bin:/Users/don/android-sdk/tools:/usr/local/Cellar/todo-txt/2.9/bin:/Users/don/apache-maven-3.2.1/bin:/Users/don/gcc-arm/bin
 
