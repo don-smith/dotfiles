@@ -65,10 +65,10 @@ let g:ctrlp_max_depth = 20
 " Syntastic
 let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_javascript_checkers = ['babel-eslint', 'standard']
-let g:syntastic_mode_map = {'mode': 'active'} " Toggle with :SyntasticToggleMode
+let g:syntastic_mode_map = {'mode': 'active'}
 autocmd BufWritePost *.js
   \ if g:syntastic_mode_map['mode'] == 'active' |
-  \   silent !standard-format -w % | " auto-format the file
+  \   silent execute "!standard-format -w %" |
   \   set autoread |
   \ endif
 
