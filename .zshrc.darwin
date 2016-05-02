@@ -54,8 +54,8 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export GNUTERM=X11
 
 # For the Node Version Manager (nvm)
-export NVM_DIR=$(brew --prefix)/var/nvm
-source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # For Python version/environment control
 eval "$(pyenv init -)"
@@ -85,12 +85,6 @@ export PATH="/Applications/MAMP/bin/php/php5.6.10/bin:$PATH"
 
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/don/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables shell command completion for gcloud.
-source '/Users/don/google-cloud-sdk/completion.zsh.inc'
 
 # For Ant
 export ANT_HOME="$HOME/Library/apache-ant-1.9.6"
