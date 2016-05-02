@@ -28,6 +28,7 @@ syntax on
 set number
 set expandtab
 set modelines=0
+set backspace=2
 set shiftwidth=2
 set clipboard=unnamed
 set synmaxcol=128
