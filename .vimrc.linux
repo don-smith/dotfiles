@@ -97,8 +97,6 @@ autocmd VimLeave * silent execute "!gnome-terminal-cursor-shape.sh block"
 " For moving up/down in paragraphs and in edit mode
 nnoremap j gj
 nnoremap k gk
-inoremap <C-k> <C-o>gk
-inoremap <C-j> <C-o>gj
 
 " Make a 3-way toggle between no line numbers, absolute, and relative:
 function! NumberToggle()
