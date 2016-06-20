@@ -13,6 +13,7 @@ ZSH_THEME="bira"
 # For a full list of active aliases, run `alias`.
 alias c="clear"
 alias cl="clear; l"
+alias t="npm test"
 alias zshrc="vim ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
 

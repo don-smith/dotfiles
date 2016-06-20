@@ -95,11 +95,9 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-" For moving up/down in paragraphs and in edit mode
+" For moving the cursor up/down in paragraphs and in edit mode
 nnoremap j gj
 nnoremap k gk
-inoremap <C-k> <C-o>gk
-inoremap <C-j> <C-o>gj
 
 " Make a 3-way toggle between no line numbers, absolute, and relative:
 function! NumberToggle()
