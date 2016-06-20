@@ -8,10 +8,25 @@ tpoff() {
   synclient TouchPadOff=2
 }
 
-fixdisplay() {
+showmain() {
   xrandr --output eDP1 --mode 1680x1050
   xrandr --output eDP1 --mode 1920x1080
-  xrandr --output DP1 --right-of eDP1
+}
+
+setdisplay() {
+  [[ $1 == l* ]] && pos="--left-of"
+  [[ $1 == r* ]] && pos="--right-of"
+
+  xrandr --addmode $2 1920x1080
+  xrandr --output $2 --mode 1920x1080 $pos eDP1
+}
+
+adddp() {
+  setdisplay $1 DP1
+}
+
+addhdmi() {
+  setdisplay $1 HDMI2
 }
 
 export PATH=~/bin:~/.nvm/versions/node/v4.4.2/bin:~/.pyenv/shims:~/.pyenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/opt/go/bin:~/projects/go/bin:/usr/local/packer:/usr/local/packer
