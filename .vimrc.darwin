@@ -3,12 +3,14 @@ filetype plugin indent on
 " Plugins
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'airblade/vim-gitgutter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'guns/vim-clojure-static'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'mattn/emmet-vim'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
