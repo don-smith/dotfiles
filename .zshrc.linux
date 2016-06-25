@@ -16,8 +16,8 @@ alias c="clear"
 alias cl="clear; l"
 alias t="npm test"
 alias py="python"
-alias zshrc="vim ~/.zshrc"
-alias vimrc="vim ~/.vimrc"
+alias zshrc="nvim ~/.zshrc"
+alias vimrc="nvim ~/.vimrc"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
