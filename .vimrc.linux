@@ -91,14 +91,19 @@ let g:airline#extensions#tabline#enabled = 1
 let g:deoplete#enable_at_startup = 1
 
 " Change the cursor between modes
-autocmd InsertEnter *
-  \ if v:insertmode == 'i' |
-  \   silent execute "!gnome-terminal-cursor-shape.sh ibeam" |
-  \ elseif v:insertmode == 'r' |
-  \   silent execute "!gnome-terminal-cursor-shape.sh underline" |
-  \ endif
-autocmd InsertLeave * silent execute "!gnome-terminal-cursor-shape.sh block"
-autocmd VimLeave * silent execute "!gnome-terminal-cursor-shape.sh block"
+if has('nvim')
+  :let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
+endif
+if !has('nvim')
+  autocmd InsertEnter *
+    \ if v:insertmode == 'i' |
+    \   silent execute "!gnome-terminal-cursor-shape.sh ibeam" |
+    \ elseif v:insertmode == 'r' |
+    \   silent execute "!gnome-terminal-cursor-shape.sh underline" |
+    \ endif
+  autocmd InsertLeave * silent execute "!gnome-terminal-cursor-shape.sh block"
+  autocmd VimLeave * silent execute "!gnome-terminal-cursor-shape.sh block"
+endif
 
 " For moving up/down in paragraphs and in edit mode
 nnoremap j gj
