@@ -34,7 +34,6 @@ set backspace=2
 set shiftwidth=2
 set clipboard=unnamed
 set synmaxcol=128
-set ttyscroll=10
 set scrolloff=5
 set encoding=utf-8
 set laststatus=2
@@ -50,8 +49,12 @@ set nobackup
 set hlsearch
 set ignorecase
 set smartcase
-set term=screen-256color
 set guifont="Source Code Pro for Powerline":h14
+
+if !has('nvim')
+  set ttyscroll=10
+  set term=screen-256colore
+endif
 
 let mapleader = ','
 
