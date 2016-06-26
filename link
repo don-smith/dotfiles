@@ -2,13 +2,13 @@
 
 # Remove existing links
 
-rm ~/.gitconfig
+rm ~/.config/nvim/init.vim
 rm ~/.gitignore_global
+rm ~/.gitconfig
 rm ~/.tern-config
 rm ~/.tmux.conf
 rm ~/.zshenv
 rm ~/.zshrc
-rm ~/.vimrc
 
 # Create symbolic links
 
@@ -18,15 +18,15 @@ ln -s $DIR/.tern-config ~/.tern-config
 
 UNAMESTR=`uname`
 if [[ "$UNAMESTR" == 'Linux' ]]; then
+  ln -s $DIR/init.vim.linux ~/.config/nvim/init.vim
   ln -s $DIR/.tmux.conf.linux ~/.tmux.conf
   ln -s $DIR/.gitconfig.linux ~/.gitconfig
-  ln -s $DIR/.vimrc.linux ~/.vimrc
   ln -s $DIR/.zshrc.linux ~/.zshrc
   ln -s $DIR/.zshenv.linux ~/.zshenv
 else # Darwin (OS X)
+  ln -s $DIR/init.vim.darwin ~/.config/nvim/init.vim
   ln -s $DIR/.tmux.conf.darwin ~/.tmux.conf
   ln -s $DIR/.gitconfig.darwin ~/.gitconfig
-  ln -s $DIR/.vimrc.darwin ~/.vimrc
   ln -s $DIR/.zshrc.darwin ~/.zshrc
 fi
 
