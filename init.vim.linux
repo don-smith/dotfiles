@@ -60,6 +60,10 @@ let mapleader = ','
 colorscheme Tomorrow-Night
 let g:airline_theme='jellybeans'
 
+" Deoplete movement within 'ins-completion-menu'
+imap <expr><C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+imap <expr><C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+
 " CtrlP
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 set wildignore+=node_modules
