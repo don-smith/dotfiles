@@ -11,13 +11,13 @@ ZSH_THEME="bira"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-alias ~="cd ~"
+alias v="nvim"
 alias c="clear"
 alias cl="clear; l"
 alias t="npm test"
 alias py="python"
-alias zshrc="nvim ~/.zshrc"
-alias vimrc="nvim ~/.vimrc"
+alias zshrc="v ~/.zshrc"
+alias vimrc="v ~/.config/nvim/init.vim"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -83,8 +83,10 @@ eval "$(pyenv init -)"
 
 source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environment
-export LC_ALL=en_NZ.utf8
+# Setting the locale's language environment
+# LC_ALL is strongly discouraged according to https://wiki.debian.org/Locale
+# export LC_ALL=en_NZ.utf8
+export LANGUAGE=en_NZ.utf8
 export LANG=en_NZ.utf8
 
 # Preferred editor for local and remote sessions
@@ -105,6 +107,8 @@ export NVM_DIR="/home/don/.nvm"
 
 # For the Powerline bar
 export POWERLINE_CONFIG_COMMAND=/usr/local/bin/powerline-config
+
+export TERM=screen-256color
 
 # Automatically apply the designated node version based on the .nvmrc file
 autoload -U add-zsh-hook

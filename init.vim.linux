@@ -39,7 +39,6 @@ set shiftwidth=2
 set clipboard=unnamed
 set synmaxcol=128
 set scrolloff=5
-set encoding=utf-8
 set laststatus=2
 set tabstop=2
 set wrap
@@ -53,17 +52,13 @@ set nobackup
 set hlsearch
 set ignorecase
 set smartcase
+set termguicolors
 set guifont="Source Code Pro for Powerline":h14
-
-if !has('nvim')
-  set ttyscroll=10
-  set term=screen-256colore
-endif
 
 let mapleader = ','
 
 colorscheme Tomorrow-Night
-let g:airline_theme='tomorrow'
+let g:airline_theme='jellybeans'
 
 " CtrlP
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
@@ -91,19 +86,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:deoplete#enable_at_startup = 1
 
 " Change the cursor between modes
-if has('nvim')
-  :let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
-endif
-if !has('nvim')
-  autocmd InsertEnter *
-    \ if v:insertmode == 'i' |
-    \   silent execute "!gnome-terminal-cursor-shape.sh ibeam" |
-    \ elseif v:insertmode == 'r' |
-    \   silent execute "!gnome-terminal-cursor-shape.sh underline" |
-    \ endif
-  autocmd InsertLeave * silent execute "!gnome-terminal-cursor-shape.sh block"
-  autocmd VimLeave * silent execute "!gnome-terminal-cursor-shape.sh block"
-endif
+:let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 " For moving up/down in paragraphs and in edit mode
 nnoremap j gj

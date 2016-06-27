@@ -11,11 +11,13 @@ ZSH_THEME="bira"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+alias v="nvim"
 alias c="clear"
 alias cl="clear; l"
 alias t="npm test"
-alias zshrc="nvim ~/.zshrc"
-alias vimrc="nvim ~/.vimrc"
+alias py="python"
+alias zshrc="v ~/.zshrc"
+alias vimrc="v ~/.config/nvim/init.vim"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"

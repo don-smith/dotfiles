@@ -1,8 +1,7 @@
 # Mouse mode on!
-set -g mode-mouse on
-set -g mouse-resize-pane on
-setw -g mouse-select-pane on
-setw -g mouse-select-window on
+set -g mouse on
+
+set -g default-terminal "screen-256color"
 
 # Easier window navigation
 bind p previous-window
