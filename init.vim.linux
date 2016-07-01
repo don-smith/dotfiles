@@ -58,7 +58,8 @@ set guifont="Source Code Pro for Powerline":h14
 let mapleader = ','
 
 colorscheme Tomorrow-Night
-let g:airline_theme='jellybeans'
+let g:airline_theme='tomorrow'
+:let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " Deoplete movement within 'ins-completion-menu'
 imap <expr><C-j> pumvisible() ? "\<C-n>" : "\<C-j>"

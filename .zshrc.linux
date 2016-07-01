@@ -108,8 +108,6 @@ export NVM_DIR="/home/don/.nvm"
 # For the Powerline bar
 export POWERLINE_CONFIG_COMMAND=/usr/local/bin/powerline-config
 
-export TERM=screen-256color
-
 # Automatically apply the designated node version based on the .nvmrc file
 autoload -U add-zsh-hook
 load-nvmrc() {
