@@ -2,6 +2,9 @@
 
 # Remove existing links
 
+sudo rm /usr/local/bin/gntx
+sudo rm /usr/local/bin/sttx
+
 rm ~/.config/nvim/init.vim
 rm ~/.gitignore_global
 rm ~/.gitconfig
@@ -23,6 +26,8 @@ if [[ "$UNAMESTR" == 'Linux' ]]; then
   ln -s $DIR/.gitconfig.linux ~/.gitconfig
   ln -s $DIR/.zshrc.linux ~/.zshrc
   ln -s $DIR/.zshenv.linux ~/.zshenv
+  sudo ln -s $DIR/gntx /usr/local/bin/gntx
+  sudo ln -s $DIR/sttx /usr/local/bin/sttx
 else # Darwin (OS X)
   ln -s $DIR/init.vim.darwin ~/.config/nvim/init.vim
   ln -s $DIR/.tmux.conf.darwin ~/.tmux.conf

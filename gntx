@@ -1,0 +1,2 @@
+gnome-terminal -e tmux new-session -A -s zsh
+
