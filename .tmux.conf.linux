@@ -24,8 +24,11 @@ source "/usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline
 set-window-option -g mode-keys vi
 bind -t vi-copy y copy-pipe 'xclip -in -selection clipboard'
 
-# For cursor shape changing in Neovim
-set -ga terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[2 q:st-256color:Tc'
+# To enable 24bit color in tmux
+set -ga terminal-overrides ',*:Tc'
+
+# Enable cursor shape changing in Neovim with st
+#set -ga terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[2 q'
 
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'

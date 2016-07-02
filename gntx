@@ -1,2 +1,2 @@
-gnome-terminal -e tmux new-session -A -s zsh
+gnome-terminal -e "tmux new-session -A -s zsh"
 
