@@ -1,8 +1,6 @@
 # Mouse mode on!
 set -g mouse on
 
-set -g default-terminal "screen-256color"
-
 # Easier window navigation
 bind p previous-window
 bind -n S-C-Right next-window
