@@ -25,8 +25,7 @@ set-window-option -g mode-keys vi
 bind -t vi-copy y copy-pipe 'xclip -in -selection clipboard'
 
 # For cursor shape changing in Neovim
-set -g -a terminal-overrides ',st-256color:Tc'
-set -g -a terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[2 q'
+set -ga terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[2 q:st-256color:Tc'
 
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'
