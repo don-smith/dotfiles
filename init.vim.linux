@@ -22,6 +22,7 @@ Plug 'scrooloose/syntastic'
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
@@ -36,7 +37,7 @@ set expandtab
 set modelines=0
 set backspace=2
 set shiftwidth=2
-set clipboard=unnamed
+set clipboard+=unnamedplus
 set synmaxcol=128
 set scrolloff=5
 set laststatus=2
@@ -136,13 +137,9 @@ nmap <leader>t :tabnew<CR>
 nmap <S-l> :tabnext<CR>
 nmap <S-h> :tabprevious<CR>
 
-" Yank text to the clipboard
-noremap <leader>y "*y
-noremap <leader>yy "*Y
-
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
-" Open Neovim config from inside Neovim
+" Open and source Neovim config from inside Neovim
 command! Config :e ~/.config/nvim/init.vim
-
+command! Source :source ~/.config/nvim/init.vim
