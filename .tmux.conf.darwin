@@ -41,6 +41,7 @@ set -g @plugin 'nhdaly/tmux-scroll-copy-mode'
 
 set -g @resurrect-strategy-nvim 'session'
 set -g @resurrect-processes 'slurm "-i wlan0"'
+set -g @continuum-boot 'on'
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
