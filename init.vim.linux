@@ -15,7 +15,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
-Plug 'rking/ag.vim'
+Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
@@ -119,6 +119,9 @@ map <leader>st :SyntasticToggleMode<CR>
 
 " NERDTree toggle
 map <C-t> :NERDTreeToggle<CR>
+
+" Ack shortcut
+nnoremap <leader>a :Ack!<Space>
 
 " Format the entire file
 nmap <leader>fef ggVG=

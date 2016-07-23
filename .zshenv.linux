@@ -1,11 +1,25 @@
+github() {
+  eval $(ssh-agent -s)
+  ssh-add ~/.ssh/github_rsa
+}
+
 tpon() {
   echo "TouchPad turned on"
   synclient TouchPadOff=0
+  synclient TapButton1=1
+  synclient VertScrollDelta=-60
+  synclient HorizScrollDelta=-60
 }
 
 tpoff() {
   echo "TouchPad turned off"
   synclient TouchPadOff=2
+  synclient TapButton1=0
+  echo "pointer = default" | xmodmap -
+}
+
+naturalmouse() {
+  xmodmap ~/projects/dotfiles/.Xmodmap
 }
 
 showmain() {

@@ -81,6 +81,10 @@ export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
 
+# Command completion for Docker Compose
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
+
 source $ZSH/oh-my-zsh.sh
 
 # Setting the locale's language environment
