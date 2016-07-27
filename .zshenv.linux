@@ -54,5 +54,5 @@ addhdmi() {
   setdisplay $1 HDMI2
 }
 
-export PATH=~/bin:~/.nvm/versions/node/v4.4.2/bin:~/.pyenv/shims:~/.pyenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/opt/go/bin:~/projects/go/bin:/usr/local/packer:/usr/local/packer
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:~/bin:~/.nvm/versions/node/v4.4.2/bin:~/.pyenv/shims:~/.pyenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/opt/go/bin:~/projects/go/bin:/usr/local/packer:/usr/local/packer
 
