@@ -22,6 +22,17 @@ naturalmouse() {
   xmodmap ~/projects/dotfiles/.Xmodmap
 }
 
+volumeup() {
+  amixer sset 'Master' 5%+ on
+}
+
+vol() {
+  [[ $1 == u* ]] && dir="+"
+  [[ $1 == d* ]] && dir="-"
+
+  amixer sset 'Master' 5%$dir on
+}
+
 showmain() {
   xrandr --output eDP1 --mode 1680x1050
   xrandr --output eDP1 --mode 1920x1080
