@@ -71,12 +71,6 @@ export GOPATH=$HOME/Projects/go
 export GOROOT=/usr/local/opt/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
-# Python environment
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH=$PATH:$PYENV_ROOT/bin
-eval "$(pyenv init -)"
-#eval "$(pyenv virtualenv-init -)"
-
 # Command completion for Docker Compose
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
