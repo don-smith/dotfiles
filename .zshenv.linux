@@ -18,6 +18,21 @@ tpoff() {
   echo "pointer = default" | xmodmap -
 }
 
+showwifis() {
+  nmcli dev wifi list
+}
+
+addwifi() {
+  sudo nmcli c add type wifi con-name $1 ifname wlan0 ssid $1
+  sudo nmcli con modify $1 wifi-sec.key-mgmt wpa-psk
+  sudo nmcli con modify $1 wifi-sec.psk $2
+  sudo nmcli con up $1
+}
+
+swapcaps() {
+  setxkbmap -option ctrl:swapcaps
+}
+
 naturalmouse() {
   xmodmap ~/projects/dotfiles/.Xmodmap
 }
@@ -53,6 +68,8 @@ adddp() {
 addhdmi() {
   setdisplay $1 HDMI2
 }
+
+swapcaps()
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:~/bin:~/.nvm/versions/node/v4.4.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/opt/go/bin:~/projects/go/bin:/usr/local/packer:/usr/local/packer
 
