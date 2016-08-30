@@ -30,7 +30,13 @@ addwifi() {
 }
 
 swapcaps() {
-  setxkbmap -option ctrl:swapcaps
+  if [[ $CAPS_SWAPPED -eq 1 ]]; then
+    setxkbmap -option
+    export CAPS_SWAPPED=0
+  else
+    setxkbmap -option ctrl:swapcaps
+    export CAPS_SWAPPED=1
+  fi
 }
 
 naturalmouse() {
@@ -56,6 +62,7 @@ showmain() {
 setdisplay() {
   [[ $1 == l* ]] && pos="--left-of"
   [[ $1 == r* ]] && pos="--right-of"
+  [[ $1 == s* ]] && pos="--same-as"
 
   xrandr --addmode $2 1920x1080
   xrandr --output $2 --mode 1920x1080 $pos eDP1
@@ -69,7 +76,7 @@ addhdmi() {
   setdisplay $1 HDMI2
 }
 
-swapcaps()
+swapcaps
+naturalmouse
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:~/bin:~/.nvm/versions/node/v4.4.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/opt/go/bin:~/projects/go/bin:/usr/local/packer:/usr/local/packer
-
