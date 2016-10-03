@@ -1,6 +1,16 @@
+# Path to your oh-my-zsh installation.
+export ZSH=/home/don/.oh-my-zsh
+
+export LANG=en_NZ.UTF-8
+export LC_MESSAGES="C"
+
 github() {
   eval $(ssh-agent -s)
   ssh-add ~/.ssh/github
+}
+
+fixinput() {
+  xmodmap ~/.Xmodmap
 }
 
 tpon() {
@@ -18,42 +28,6 @@ tpoff() {
   echo "pointer = default" | xmodmap -
 }
 
-showwifis() {
-  nmcli dev wifi list
-}
-
-addwifi() {
-  sudo nmcli c add type wifi con-name $1 ifname wlan0 ssid $1
-  sudo nmcli con modify $1 wifi-sec.key-mgmt wpa-psk
-  sudo nmcli con modify $1 wifi-sec.psk $2
-  sudo nmcli con up $1
-}
-
-swapcaps() {
-  if [[ $CAPS_SWAPPED -eq 1 ]]; then
-    setxkbmap -option
-    export CAPS_SWAPPED=0
-  else
-    setxkbmap -option ctrl:swapcaps
-    export CAPS_SWAPPED=1
-  fi
-}
-
-naturalmouse() {
-  xmodmap ~/projects/dotfiles/.Xmodmap
-}
-
-volumeup() {
-  amixer sset 'Master' 5%+ on
-}
-
-vol() {
-  [[ $1 == u* ]] && dir="+"
-  [[ $1 == d* ]] && dir="-"
-
-  amixer sset 'Master' 5%$dir on
-}
-
 showmain() {
   xrandr --output eDP1 --mode 1680x1050
   xrandr --output eDP1 --mode 1920x1080
@@ -65,18 +39,15 @@ setdisplay() {
   [[ $1 == s* ]] && pos="--same-as"
 
   xrandr --addmode $2 1920x1080
-  xrandr --output $2 --mode 1920x1080 $pos eDP1
+  xrandr --output $2 --mode 1920x1080 $pos eDP-1
 }
 
 adddp() {
-  setdisplay $1 DP1
+  setdisplay $1 HDMI-1
 }
 
 addhdmi() {
-  setdisplay $1 HDMI2
+  setdisplay $1 HDMI-2
 }
 
-swapcaps
-naturalmouse
-
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:~/bin:~/.nvm/versions/node/v4.4.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/opt/go/bin:~/projects/go/bin:/usr/local/packer:/usr/local/packer
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:~/bin:~/.nvm/versions/node/v6.7.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/opt/go/bin:~/projects/go/bin:/usr/local/packer:/usr/local/packer
