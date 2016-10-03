@@ -8,3 +8,4 @@ cd dotfiles
 ./link
 ```
 
+The OS X dotfiles are in the `darwin` branch.
