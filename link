@@ -18,26 +18,18 @@ rm ~/.zshrc
 # Create symbolic links
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 ln -s $DIR/.gitignore_global ~/.gitignore_global
 ln -s $DIR/.tern-config ~/.tern-config
-
-UNAMESTR=`uname`
-if [[ "$UNAMESTR" == 'Linux' ]]; then
-  ln -s $DIR/init.vim.linux ~/.config/nvim/init.vim
-  ln -s $DIR/i3.config ~/.config/i3/config
-  ln -s $DIR/.tmux.conf.linux ~/.tmux.conf
-  ln -s $DIR/.gitconfig.linux ~/.gitconfig
-  ln -s $DIR/.Xmodmap ~/.Xmodmap
-  ln -s $DIR/.xinitrc ~/.xinitrc
-  ln -s $DIR/.zshrc.linux ~/.zshrc
-  ln -s $DIR/.zshenv.linux ~/.zshenv
-  sudo ln -s $DIR/solve /usr/local/bin/solve
-else # Darwin (OS X)
-  ln -s $DIR/init.vim.darwin ~/.config/nvim/init.vim
-  ln -s $DIR/.tmux.conf.darwin ~/.tmux.conf
-  ln -s $DIR/.gitconfig.darwin ~/.gitconfig
-  ln -s $DIR/.zshrc.darwin ~/.zshrc
-fi
+ln -s $DIR/init.vim ~/.config/nvim/init.vim
+ln -s $DIR/i3.config ~/.config/i3/config
+ln -s $DIR/.tmux.conf ~/.tmux.conf
+ln -s $DIR/.gitconfig ~/.gitconfig
+ln -s $DIR/.Xmodmap ~/.Xmodmap
+ln -s $DIR/.xinitrc ~/.xinitrc
+ln -s $DIR/.zshrc ~/.zshrc
+ln -s $DIR/.zshenv ~/.zshenv
+sudo ln -s $DIR/solve /usr/local/bin/solve
 
 echo "All linked up."
 
