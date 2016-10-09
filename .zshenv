@@ -9,6 +9,11 @@ github() {
   ssh-add ~/.ssh/github
 }
 
+gitlab() {
+  eval $(ssh-agent -s)
+  ssh-add ~/.ssh/gitlab
+}
+
 fixinput() {
   xmodmap ~/.Xmodmap
 }
@@ -50,4 +55,4 @@ addhdmi() {
   setdisplay $1 HDMI-2
 }
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:~/bin:~/.nvm/versions/node/v6.7.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/opt/go/bin:~/projects/go/bin:/usr/local/packer:/usr/local/packer
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:~/.nvm/versions/node/v6.7.0/bin:~/projects/go/bin:/usr/bin/vendor_perl

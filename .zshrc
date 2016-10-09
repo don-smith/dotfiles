@@ -10,12 +10,14 @@ ZSH_THEME="hippy"
 # For a full list of active aliases, run `alias`.
 alias v="nvim"
 alias c="clear"
-alias cl="clear; l"
+alias cl="c; l"
 alias t="npm test"
 alias py="python"
 alias zshrc="v ~/.zshrc"
 alias zshenv="v ~/.zshenv"
 alias vimrc="v ~/.config/nvim/init.vim"
+alias tre="tree -a -C -I 'node_modules|.git' --dirsfirst"
+alias ct="c; tre"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -23,10 +25,9 @@ alias vimrc="v ~/.config/nvim/init.vim"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git nvm)
 
-# Go toolchain
-export GOPATH=$HOME/Projects/go
-export GOROOT=/usr/local/opt/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+# Fix Ctrl-h for Neovim
+infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
+tic $TERM.ti && rm $TERM.ti
 
 # Wire up Chruby
 #source /usr/local/share/chruby/chruby.sh
@@ -53,3 +54,5 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 
+
+[[ -s "/home/don/.gvm/scripts/gvm" ]] && source "/home/don/.gvm/scripts/gvm"

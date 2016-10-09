@@ -5,6 +5,7 @@
 sudo rm /usr/local/bin/solve
 
 rm ~/.config/nvim/init.vim
+rm ~/.config/i3status/config
 rm ~/.config/i3/config
 rm ~/.gitignore_global
 rm ~/.gitconfig
@@ -22,6 +23,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ln -s $DIR/.gitignore_global ~/.gitignore_global
 ln -s $DIR/.tern-config ~/.tern-config
 ln -s $DIR/init.vim ~/.config/nvim/init.vim
+ln -s $DIR/i3status.config ~/.config/i3status/config
 ln -s $DIR/i3.config ~/.config/i3/config
 ln -s $DIR/.tmux.conf ~/.tmux.conf
 ln -s $DIR/.gitconfig ~/.gitconfig

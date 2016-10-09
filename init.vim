@@ -74,6 +74,10 @@ let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_javascript_checkers = ['standard']
 let g:syntastic_mode_map = {'mode': 'active'}
 
+" NERDCommenter (use <leader>c<space>)
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
+
 " Powerline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
