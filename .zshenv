@@ -34,11 +34,13 @@ tpoff() {
 }
 
 showmain() {
-  xrandr --output eDP1 --mode 1680x1050
-  xrandr --output eDP1 --mode 1920x1080
+  xrandr --output eDP-1 --mode 1680x1050
+  xrandr --output eDP-1 --mode 1920x1080
 }
 
 setdisplay() {
+  [[ $1 == a* ]] && pos="--above"
+  [[ $1 == b* ]] && pos="--below"
   [[ $1 == l* ]] && pos="--left-of"
   [[ $1 == r* ]] && pos="--right-of"
   [[ $1 == s* ]] && pos="--same-as"
@@ -53,6 +55,17 @@ adddp() {
 
 addhdmi() {
   setdisplay $1 HDMI-2
+}
+
+homesetup() {
+  xrandr --output HDMI-1 --mode 1920x1080 --pos 0x0
+  xrandr --output HDMI-2 --mode 1920x1080 --pos 1920x0
+  xrandr --output eDP-1 --mode 1920x1080 --pos 960x1080
+}
+
+launchsteam() {
+  # Location of games: ~/.local/share/Steam/steamapps/common
+  LD_PRELOAD='/usr/$LIB/libstdc++.so.6 /usr/$LIB/libgcc_s.so.1 /usr/$LIB/libxcb.so.1 /usr/$LIB/libgpg-error.so' steam
 }
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:~/.nvm/versions/node/v6.7.0/bin:~/projects/go/bin:/usr/bin/vendor_perl

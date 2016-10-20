@@ -6,6 +6,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'edkolev/tmuxline.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'jiangmiao/auto-pairs'
@@ -56,6 +57,7 @@ let mapleader = ','
 colorscheme Tomorrow-Night
 let g:airline_theme='tomorrow'
 :let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+let g:airline#extensions#tmuxline#enabled = 0
 
 " Deoplete movement within 'ins-completion-menu'
 imap <expr><C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
@@ -133,6 +135,9 @@ noremap <tab> :bn<CR>
 nmap <leader>t :tabnew<CR>
 nmap <S-l> :tabnext<CR>
 nmap <S-h> :tabprevious<CR>
+
+" Faster test runner
+nnoremap ` :!npm test<CR>
 
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>

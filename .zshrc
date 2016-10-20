@@ -11,6 +11,7 @@ ZSH_THEME="hippy"
 alias v="nvim"
 alias c="clear"
 alias cl="c; l"
+alias cls="c; ls"
 alias t="npm test"
 alias py="python"
 alias zshrc="v ~/.zshrc"
@@ -23,7 +24,7 @@ alias ct="c; tre"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm)
+plugins=(git nvm archlinux)
 
 # Fix Ctrl-h for Neovim
 infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
