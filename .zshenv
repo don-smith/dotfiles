@@ -34,6 +34,7 @@ tpoff() {
 }
 
 showmain() {
+  xrandr --addmode eDP-1 1920x1080
   xrandr --output eDP-1 --mode 1680x1050
   xrandr --output eDP-1 --mode 1920x1080
 }
@@ -50,7 +51,7 @@ setdisplay() {
 }
 
 adddp() {
-  setdisplay $1 HDMI-1
+  setdisplay $1 DP-1
 }
 
 addhdmi() {
@@ -58,9 +59,18 @@ addhdmi() {
 }
 
 homesetup() {
-  xrandr --output HDMI-1 --mode 1920x1080 --pos 0x0
+  xrandr --addmode eDP-1 1920x1080
+  xrandr --addmode DP-1 1920x1080
+  xrandr --addmode HDMI-2 1920x1080
+  xrandr --output DP-1 --mode 1920x1080 --pos 0x0
   xrandr --output HDMI-2 --mode 1920x1080 --pos 1920x0
   xrandr --output eDP-1 --mode 1920x1080 --pos 960x1080
+}
+
+brightness() {
+  # cat /sys/class/backlight/intel_backlight/max_brightness
+  # cat /sys/class/backlight/intel_backlight/actual_brightness
+  sudo tee /sys/class/backlight/intel_backlight/brightness <<< $1
 }
 
 launchsteam() {
@@ -68,4 +78,4 @@ launchsteam() {
   LD_PRELOAD='/usr/$LIB/libstdc++.so.6 /usr/$LIB/libgcc_s.so.1 /usr/$LIB/libxcb.so.1 /usr/$LIB/libgpg-error.so' steam
 }
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:~/.nvm/versions/node/v6.7.0/bin:~/projects/go/bin:/usr/bin/vendor_perl
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:~/.nvm/versions/node/v6.7.0/bin:~/projects/go/bin:/usr/bin/vendor_perl:~/bin

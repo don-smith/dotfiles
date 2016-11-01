@@ -19,6 +19,7 @@ alias zshenv="v ~/.zshenv"
 alias vimrc="v ~/.config/nvim/init.vim"
 alias tre="tree -a -C -I 'node_modules|.git' --dirsfirst"
 alias ct="c; tre"
+alias git="hub"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/

@@ -36,8 +36,9 @@ feh --bg-scale ~/images/arch-wallpaper-pattern.png
 #feh --bg-scale ~/images/arch-wallpaper-black.png
 #feh --bg-scale ~/images/arch-wallpaper-blue.png
 
-# Start polkit authentication agent
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Start i3
 exec i3
+
+# Start polkit authentication agent
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
