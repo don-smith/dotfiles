@@ -9,6 +9,7 @@ ZSH_THEME="hippy"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias v="nvim"
+alias vp="v -p"
 alias c="clear"
 alias cl="c; l"
 alias cls="c; ls"
@@ -44,9 +45,6 @@ source $ZSH/oh-my-zsh.sh
 export NVM_DIR="/home/don/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# For the Powerline bar
-export POWERLINE_CONFIG_COMMAND=/usr/local/bin/powerline-config
-
 # Automatically apply the designated node version based on the .nvmrc file
 autoload -U add-zsh-hook
 load-nvmrc() {
@@ -55,6 +53,5 @@ load-nvmrc() {
   fi
 }
 add-zsh-hook chpwd load-nvmrc
-
 
 [[ -s "/home/don/.gvm/scripts/gvm" ]] && source "/home/don/.gvm/scripts/gvm"

@@ -7,6 +7,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'edkolev/tmuxline.vim'
+Plug 'fatih/vim-go'
 Plug 'flazz/vim-colorschemes'
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'jiangmiao/auto-pairs'

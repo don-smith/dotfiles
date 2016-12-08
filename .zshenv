@@ -50,11 +50,11 @@ setdisplay() {
   xrandr --output $2 --mode 1920x1080 $pos eDP-1
 }
 
-adddp() {
+dp() {
   setdisplay $1 DP-1
 }
 
-addhdmi() {
+hdmi() {
   setdisplay $1 HDMI-2
 }
 
@@ -78,4 +78,14 @@ launchsteam() {
   LD_PRELOAD='/usr/$LIB/libstdc++.so.6 /usr/$LIB/libgcc_s.so.1 /usr/$LIB/libxcb.so.1 /usr/$LIB/libgpg-error.so' steam
 }
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:~/.nvm/versions/node/v6.7.0/bin:~/projects/go/bin:/usr/bin/vendor_perl:~/bin
+xmind() {
+  export SWT_GTK3=0; ~/Downloads/xmind/XMind_amd64/XMind
+}
+
+recordscreen() {
+  ffmpeg -thread_queue_size 1024 -f alsa -i hw:1 -thread_queue_size 32 -f x11grab -s 1920x1080 -r 15 -i $DISPLAY -c:v libx264 -b:v 200k -c:a aac -s 1280x720 "$1.mkv"
+}
+
+processrecording() {
+  ffmpeg -i "$1.mkv" -c:v libx264 -crf 18 -preset slow -pix_fmt yuv420p -c:a copy "$1-youtube.mkv"
+}
