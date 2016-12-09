@@ -83,9 +83,9 @@ xmind() {
 }
 
 recordscreen() {
-  ffmpeg -thread_queue_size 1024 -f alsa -i hw:1 -thread_queue_size 32 -f x11grab -s 1920x1080 -r 15 -i $DISPLAY -c:v libx264 -b:v 200k -c:a aac -s 1280x720 "$1.mkv"
+  ffmpeg -thread_queue_size 1024 -f alsa -i hw:1 -thread_queue_size 32 -f x11grab -s 1920x1080 -r 25 -i $DISPLAY -c:v libx264 -c:a aac "$1.mkv"
 }
 
 processrecording() {
-  ffmpeg -i "$1.mkv" -c:v libx264 -crf 18 -preset slow -pix_fmt yuv420p -c:a copy "$1-youtube.mkv"
+  ffmpeg -i "$1.mkv" -c:v libx264 -af "volume=3.0" -crf 18 -preset slow -pix_fmt yuv420p -c:a aac "$1-youtube.mkv"
 }
