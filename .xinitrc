@@ -32,9 +32,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 # Set a wallpaper
-feh --bg-scale ~/images/arch-wallpaper-pattern.png
-#feh --bg-scale ~/images/arch-wallpaper-black.png
-#feh --bg-scale ~/images/arch-wallpaper-blue.png
+feh --bg-scale ~/images/wallpaper/arch-pattern.jpg
+#feh --bg-scale ~/images/wallpaper/arch-wall.jpg
+#feh --bg-scale ~/images/wallpaper/arch-blue.jpg
+#feh --bg-scale ~/images/wallpaper/arch-teal.jpg
+#feh --bg-scale ~/images/wallpaper/arch-grain.png
 
 
 # Start i3
