@@ -38,7 +38,6 @@ feh --bg-scale ~/images/wallpaper/arch-pattern.jpg
 #feh --bg-scale ~/images/wallpaper/arch-teal.jpg
 #feh --bg-scale ~/images/wallpaper/arch-grain.png
 
-
 # Start i3
 exec i3
 
