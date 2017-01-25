@@ -20,6 +20,7 @@ alias zshrc="v ~/.zshrc"
 alias zshenv="v ~/.zshenv"
 alias vimrc="v ~/.config/nvim/init.vim"
 alias tre="tree -a -C -I 'node_modules|.git' --dirsfirst"
+alias take-screenshot="gnome-screenshot --interactive"
 alias ct="c; tre"
 alias git="hub"
 
