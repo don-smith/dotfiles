@@ -16,11 +16,13 @@ alias cl="c; l"
 alias cls="c; ls"
 alias t="npm test"
 alias py="python"
+alias gdc="gd --cached"
 alias zshrc="v ~/.zshrc"
 alias zshenv="v ~/.zshenv"
+alias dc="docker-compose"
+alias dcr="docker-compose run"
 alias vimrc="v ~/.config/nvim/init.vim"
 alias tre="tree -a -C -I 'node_modules|.git' --dirsfirst"
-alias take-screenshot="gnome-screenshot --interactive"
 alias ct="c; tre"
 alias git="hub"
 
@@ -28,7 +30,7 @@ alias git="hub"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm archlinux)
+plugins=(git nvm archlinux docker)
 
 # Fix Ctrl-h for Neovim
 infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti

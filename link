@@ -4,6 +4,8 @@
 
 sudo rm /usr/local/bin/solve
 
+rm ~/.local/bin/take-screenshot
+rm ~/.local/bin/android-studio
 rm ~/.config/nvim/init.vim
 rm ~/.config/i3status/config
 rm ~/.config/i3/config
@@ -21,6 +23,8 @@ rm ~/.zshrc
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+ln -s $DIR/take-screenshot ~/.local/bin/take-screenshot
+ln -s $DIR/android-studio ~/.local/bin/android-studio
 ln -s $DIR/.gitignore_global ~/.gitignore_global
 ln -s $DIR/.tern-config ~/.tern-config
 ln -s $DIR/init.vim ~/.config/nvim/init.vim

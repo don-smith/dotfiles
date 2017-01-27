@@ -28,7 +28,7 @@ tpon() {
 
 tpoff() {
   echo "TouchPad turned off"
-  synclient TouchPadOff=2
+  synclient TouchPadOff=1
   synclient TapButton1=0
   echo "pointer = default" | xmodmap -
 }
