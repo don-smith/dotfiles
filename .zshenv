@@ -14,6 +14,11 @@ gitlab() {
   ssh-add ~/.ssh/gitlab
 }
 
+digitalocean() {
+  eval $(ssh-agent -s)
+  ssh-add ~/.ssh/digital-ocean
+}
+
 fixinput() {
   xmodmap ~/.Xmodmap
 }

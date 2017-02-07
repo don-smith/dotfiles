@@ -1,3 +1,5 @@
+export VISUAL="nvim"
+
 export JAVA_HOME=/usr/lib/jvm/default
 export ANDROID_HOME=~/Android/Sdk
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
@@ -8,8 +10,12 @@ export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 # npm modules that should be global:
+# - ferment
+# - git-ssb
 # - standard
+# - ssb-patchwork
 # - react-native-cli
+# - scuttlebot@latest
 # 
 # To install modules to a new node version:
 # nvm install v9.2.0 --reinstall-packages-from=v7.4.0
