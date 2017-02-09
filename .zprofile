@@ -10,6 +10,7 @@ export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 # npm modules that should be global:
+# - vmd
 # - ferment
 # - git-ssb
 # - standard
