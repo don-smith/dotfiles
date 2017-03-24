@@ -19,6 +19,11 @@ digitalocean() {
   ssh-add ~/.ssh/digital-ocean
 }
 
+ssbpub() {
+  eval $(ssh-agent -s)
+  ssh-add ~/.ssh/ssb-pub
+}
+
 fixinput() {
   xmodmap ~/.Xmodmap
 }
@@ -63,13 +68,18 @@ hdmi() {
   setdisplay $1 HDMI-2
 }
 
-homesetup() {
+trimon() {
   xrandr --addmode eDP-1 1920x1080
   xrandr --addmode DP-1 1920x1080
   xrandr --addmode HDMI-2 1920x1080
   xrandr --output DP-1 --mode 1920x1080 --pos 0x0
   xrandr --output HDMI-2 --mode 1920x1080 --pos 1920x0
   xrandr --output eDP-1 --mode 1920x1080 --pos 960x1080
+}
+
+mirror() {
+  dp same
+  hdmi same
 }
 
 brightness() {
