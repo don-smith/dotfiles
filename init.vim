@@ -89,6 +89,9 @@ let g:airline#extensions#tabline#enabled = 1
 " Deoplete
 let g:deoplete#enable_at_startup = 1
 
+" JavaScript formatting
+autocmd FileType javascript set formatprg=prettier\ --stdin
+
 " Change the cursor between modes
 :let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 

@@ -21,6 +21,7 @@ export PATH=${PATH}:/home/don/.cargo/bin
 # - ferment
 # - git-ssb
 # - standard
+# - prettier
 # - react-native-cli
 # - scuttlebot@latest
 # 
