@@ -4,35 +4,35 @@ export ZSH=/home/don/.oh-my-zsh
 export LANG=en_NZ.UTF-8
 export LC_MESSAGES="C"
 
-kssh() {
-  ps -ef | awk '/ssh-agent/ && $8 !~ /awk/ {printf "%s\n", $2}' | xargs sudo kill -9
+kill-ssh-agents() {
+  killall ssh-agent
 }
 
 github() {
-  kssh
+  kill-ssh-agents
   eval $(ssh-agent -s)
   ssh-add ~/.ssh/github
 }
 
 gitlab() {
-  kssh
+  kill-ssh-agents
   eval $(ssh-agent -s)
   ssh-add ~/.ssh/gitlab
 }
 
 digo() {
-  kssh
+  kill-ssh-agents
   eval $(ssh-agent -s)
   ssh-add ~/.ssh/digital-ocean
 }
 
 ssbpub() {
-  kssh
+  kill-ssh-agents
   eval $(ssh-agent -s)
   ssh-add ~/.ssh/ssb-pub
 }
 
-fixinput() {
+fixi() {
   xmodmap ~/.Xmodmap
 }
 
