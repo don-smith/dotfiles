@@ -99,6 +99,9 @@ autocmd FileType javascript set formatprg=prettier\ --stdin
 nnoremap j gj
 nnoremap k gk
 
+" Run macros easier (I always record them in the q register)
+:nnoremap <Space> @q
+
 " Make a 3-way toggle between no line numbers, absolute, and relative:
 function! NumberToggle()
   if(&rnu == 0 && &nu == 0)
