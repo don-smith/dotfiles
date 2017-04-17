@@ -61,6 +61,10 @@ let g:airline_theme='tomorrow'
 :let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let g:airline#extensions#tmuxline#enabled = 0
 
+" Spell checking
+set spelllang=en_nz
+nmap <silent> <leader>sp :set spell!<CR>
+
 " Deoplete movement within 'ins-completion-menu'
 imap <expr><C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 imap <expr><C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
