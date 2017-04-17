@@ -63,6 +63,7 @@ let g:airline#extensions#tmuxline#enabled = 0
 
 " Spell checking
 set spelllang=en_nz
+au BufRead *.md setlocal spell
 nmap <silent> <leader>sp :set spell!<CR>
 
 " Deoplete movement within 'ins-completion-menu'
