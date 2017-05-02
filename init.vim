@@ -14,11 +14,13 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
 Plug 'mattn/emmet-vim'
 Plug 'mileszs/ack.vim'
+Plug 'Quramy/tsuquyomi'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeTabsToggle' }
 Plug 'scrooloose/syntastic'
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
@@ -82,7 +84,11 @@ let g:ctrlp_max_depth = 20
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_javascript_checkers = ['standard']
+let g:syntastic_typescript_checkers = ['tsuquyomi']
 let g:syntastic_mode_map = {'mode': 'active'}
+
+" Tsuquyomi (TypeScript plugin)
+let g:tsuquyomi_disable_quickfix = 1
 
 " NERDCommenter (use <leader>c<space>)
 let g:NERDSpaceDelims = 1
