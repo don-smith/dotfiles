@@ -15,6 +15,7 @@ Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
 Plug 'mattn/emmet-vim'
 Plug 'mileszs/ack.vim'
 Plug 'Quramy/tsuquyomi'
+Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeTabsToggle' }
 Plug 'scrooloose/syntastic'
@@ -87,6 +88,9 @@ let g:syntastic_javascript_checkers = ['standard']
 let g:syntastic_typescript_checkers = ['tsuquyomi']
 let g:syntastic_mode_map = {'mode': 'active'}
 
+" Neoformat
+let g:neoformat_try_formatprg = 1
+
 " Tsuquyomi (TypeScript plugin)
 let g:tsuquyomi_disable_quickfix = 1
 
@@ -139,18 +143,18 @@ map <leader>st :SyntasticToggleMode<CR>
 " An easy escape
 :imap jj <Esc>
 
-" NERDTree toggle
-" map <C-t> :NERDTreeToggle<CR>
+" NERDTree
+let g:NERDTreeWinSize = 44
 map <C-t> :NERDTreeTabsToggle<CR>
 
 " Ack shortcut
 nnoremap <leader>a :Ack!<Space>
 
 " Format the entire file
-nmap <leader>fef ggVG=
+nmap <leader>fef :Neoformat<CR>
 
 " Quit current file
-nmap <leader>q :bd<CR>
+nmap <leader>q :bd!<CR>
 
 " Unhighlight previous search
 nnoremap <ESC> :noh<RETURN><ESC>
