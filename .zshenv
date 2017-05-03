@@ -8,7 +8,7 @@ kill-ssh-agents() {
   killall ssh-agent
 }
 
-github() {
+gh() {
   kill-ssh-agents
   eval $(ssh-agent -s)
   ssh-add ~/.ssh/github
