@@ -84,9 +84,10 @@ let g:ctrlp_max_depth = 20
 " Syntastic
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_javascript_checkers = ['standard']
 let g:syntastic_typescript_checkers = ['tsuquyomi']
 let g:syntastic_mode_map = {'mode': 'active'}
+" For JavaScript, use standard if it doesn't find an .eslintrc file
+autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') != '' ? ['eslint'] : ['standard']
 
 " Neoformat
 let g:neoformat_try_formatprg = 1
@@ -145,6 +146,7 @@ map <leader>st :SyntasticToggleMode<CR>
 
 " NERDTree
 let g:NERDTreeWinSize = 44
+let g:NERDTreeShowHidden = 1
 map <C-t> :NERDTreeTabsToggle<CR>
 
 " Ack shortcut

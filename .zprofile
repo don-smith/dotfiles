@@ -14,16 +14,18 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=${PATH}:/home/don/.cargo/bin
 
 # npm modules that should be global:
-# - now
-# - mup
-# - vmd
 # - dat
+# - eslint
 # - ferment
 # - git-ssb
-# - standard
+# - gitbook-cli
+# - mup
+# - now
 # - prettier
 # - react-native-cli
 # - scuttlebot@latest
+# - standard
+# - vmd
 # 
 # To install modules to a new node version:
 # nvm install v9.2.0 --reinstall-packages-from=v7.4.0
