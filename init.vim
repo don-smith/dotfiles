@@ -150,6 +150,10 @@ map <C-t> :NERDTreeTabsToggle<CR>
 " Ack shortcut
 nnoremap <leader>a :Ack!<Space>
 
+" Splits
+nmap <leader>h :sp<CR>
+nmap <leader>v :vsp<CR>
+
 " Format the entire file
 nmap <leader>fef :Neoformat<CR>
 
