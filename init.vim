@@ -112,6 +112,9 @@ autocmd FileType javascript set formatprg=prettier\ --stdin
 " Change the cursor between modes
 :let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
+" Exit terminal mode quicker/easier
+:tnoremap <C-[> <C-\><C-n>
+
 " For moving up/down in paragraphs and in edit mode
 nnoremap j gj
 nnoremap k gk
