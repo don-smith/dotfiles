@@ -39,10 +39,6 @@ bindkey "^R" history-incremental-search-backward
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git nvm archlinux docker)
 
-# Fix Ctrl-h for Neovim
-infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
-tic $TERM.ti && rm $TERM.ti
-
 # Wire up Chruby
 #source /usr/local/share/chruby/chruby.sh
 #source /usr/local/share/chruby/auto.sh
