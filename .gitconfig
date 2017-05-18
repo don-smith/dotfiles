@@ -1,9 +1,26 @@
 [user]
 	name = Don Smith
-	email = locksmithdon@gmail.com
+	email = don@antiantonym.com
 [credential]
 	helper = cache
 [push]
 	default = matching
 [core]
   excludesfile = ~/.gitignore_global
+[alias]
+  d = difftool
+  m = mergetool
+[diff]
+  tool = vimdiff
+[difftool "vimdiff"]
+  path = nvim
+[merge]
+  tool = vimdiff
+  conflicstyle = diff3
+  prompt = false
+[mergetool]
+  keepBackup = false
+[mergetool "vimdiff"]
+  path = nvim
+[clean]
+  requireForce = false
