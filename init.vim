@@ -187,8 +187,8 @@ nmap <leader>t :tabnew<CR>
 nmap <S-l> :tabnext<CR>
 nmap <S-h> :tabprevious<CR>
 
-" Faster test runner
-nnoremap ` :!npm test<CR>
+" Open the current markdown file in vmd
+nmap <leader>md :!vmd % &<CR>
 
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
