@@ -63,3 +63,5 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 
 [[ -s "/home/don/.gvm/scripts/gvm" ]] && source "/home/don/.gvm/scripts/gvm"
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
