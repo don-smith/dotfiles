@@ -153,6 +153,19 @@ map <C-t> :NERDTreeTabsToggle<CR>
 " Ack shortcut
 nnoremap <leader>a :Ack!<Space>
 
+" Fugitive (Git) shortcuts
+" :Gstatus => -: stage/reset | p: patch | cc: Commit
+nmap <leader>gb :Gbrowse<CR>
+nmap <leader>gs :Gstatus<CR>
+nmap <leader>gc :Gcommit<CR>
+nmap <leader>gd :Gdiff<CR>
+nmap <leader>gw :Gwrite<CR>
+nmap <leader>gr :Gread<CR>
+nmap <leader>du :diffupdate<CR>
+nmap <leader>dg :diffget 
+nmap <leader>dp :diffput 
+nmap <leader>ge :Gedit 
+
 " Splits
 nmap <leader>h :sp<CR>
 nmap <leader>v :vsp<CR>
