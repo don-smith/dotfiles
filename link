@@ -6,6 +6,7 @@ sudo rm /usr/local/bin/solve
 
 rm ~/.local/bin/take-screenshot
 rm ~/.local/bin/android-studio
+rm ~/.config/termite/config
 rm ~/.config/nvim/init.vim
 rm ~/.config/nvim/spell
 rm ~/.config/i3status/config
@@ -28,6 +29,7 @@ ln -s $DIR/take-screenshot ~/.local/bin/take-screenshot
 ln -s $DIR/android-studio ~/.local/bin/android-studio
 ln -s $DIR/.gitignore_global ~/.gitignore_global
 ln -s $DIR/.tern-config ~/.tern-config
+ln -s $DIR/termite.config ~/.config/termite/config
 ln -s $DIR/init.vim ~/.config/nvim/init.vim
 ln -s $DIR/spell ~/.config/nvim/spell
 ln -s $DIR/i3status.config ~/.config/i3status/config
