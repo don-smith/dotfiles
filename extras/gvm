@@ -1,4 +1,5 @@
 #!/bin/zsh
 
+# Go version manager
 [[ -s "/home/don/.gvm/scripts/gvm" ]] && source "/home/don/.gvm/scripts/gvm"
 
