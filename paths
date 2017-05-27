@@ -1,11 +1,30 @@
 # This file is sourced from $DOTFILES/home/.zshenv
 
-export PATH=$PATH:/home/don/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/home/don/.nvm/versions/node/v7.4.0/bin:/home/don/projects/go/bin:/usr/bin/vendor_perl:$GEM_HOME/bin:/home/don/.local/bin:$DOTFILES/bin
+# The usual suspects
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin
 
-# Java & Android
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+# User executables
+export PATH=$PATH:$HOME/.local/bin
+
+# DOTFILES
+export PATH=$PATH:$DOTFILES/bin
+
+# Node/nvm
+export PATH=$PATH:$HOME/.nvm/versions/node/v7.4.0/bin
+
+# Go
+export PATH=$PATH:$HOME/projects/go/bin
+
+# Ruby
+export PATH=$PATH:$GEM_HOME/bin
+
+# Android
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Rust
-export PATH=${PATH}:/home/don/.cargo/bin
+export PATH=$PATH:$HOME/.cargo/bin
+
+# Perl
+export PATH=$PATH:/usr/bin/vendor_perl
 
