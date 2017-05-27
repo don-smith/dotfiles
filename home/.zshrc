@@ -20,7 +20,8 @@ plugins=(git nvm archlinux docker)
 
 source $ZSH/oh-my-zsh.sh
 
-#source $DOTFILES/extras/ruby
+# chruby not current installed
+# source $DOTFILES/extras/ruby
 
 source $DOTFILES/extras/docker
 
