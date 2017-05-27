@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+# Command completion for Docker Compose
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
+

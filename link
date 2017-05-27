@@ -1,47 +1,40 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 # Remove existing links
 
-sudo rm /usr/local/bin/solve
+rm ~/.xinitrc
+rm ~/.zshenv
+rm ~/.zprofile
+rm ~/.zshrc
+rm ~/.Xmodmap
+rm ~/.gitconfig
+rm ~/.tmux.conf
+rm ~/.tern-config
+rm ~/.gitignore_global
 
-rm ~/.local/bin/take-screenshot
-rm ~/.local/bin/android-studio
-rm ~/.config/termite/config
+rm ~/.config/i3/config
+rm ~/.config/i3status/config
 rm ~/.config/nvim/init.vim
 rm ~/.config/nvim/spell
-rm ~/.config/i3status/config
-rm ~/.config/i3/config
-rm ~/.gitignore_global
-rm ~/.gitconfig
-rm ~/.tern-config
-rm ~/.tmux.conf
-rm ~/.Xmodmap
-rm ~/.xinitrc
-rm ~/.zprofile
-rm ~/.zshenv
-rm ~/.zshrc
+rm ~/.config/termite/config
 
 # Create symbolic links
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ln -s $DOTFILES/home/.xinitrc ~/.xinitrc
+ln -s $DOTFILES/home/.zshenv ~/.zshenv
+ln -s $DOTFILES/home/.zprofile ~/.zprofile
+ln -s $DOTFILES/home/.zshrc ~/.zshrc
+ln -s $DOTFILES/home/.Xmodmap ~/.Xmodmap
+ln -s $DOTFILES/home/.gitconfig ~/.gitconfig
+ln -s $DOTFILES/home/.tmux.conf ~/.tmux.conf
+ln -s $DOTFILES/home/.tern-config ~/.tern-config
+ln -s $DOTFILES/home/.gitignore_global ~/.gitignore_global
 
-ln -s $DIR/take-screenshot ~/.local/bin/take-screenshot
-ln -s $DIR/android-studio ~/.local/bin/android-studio
-ln -s $DIR/.gitignore_global ~/.gitignore_global
-ln -s $DIR/.tern-config ~/.tern-config
-ln -s $DIR/termite.config ~/.config/termite/config
-ln -s $DIR/init.vim ~/.config/nvim/init.vim
-ln -s $DIR/spell ~/.config/nvim/spell
-ln -s $DIR/i3status.config ~/.config/i3status/config
-ln -s $DIR/i3.config ~/.config/i3/config
-ln -s $DIR/.tmux.conf ~/.tmux.conf
-ln -s $DIR/.gitconfig ~/.gitconfig
-ln -s $DIR/.Xmodmap ~/.Xmodmap
-ln -s $DIR/.xinitrc ~/.xinitrc
-ln -s $DIR/.zshrc ~/.zshrc
-ln -s $DIR/.zshenv ~/.zshenv
-ln -s $DIR/.zprofile ~/.zprofile
-sudo ln -s $DIR/solve /usr/local/bin/solve
+ln -s $DOTFILES/config/i3/i3.config ~/.config/i3/config
+ln -s $DOTFILES/config/i3status/i3status.config ~/.config/i3status/config
+ln -s $DOTFILES/config/nvim/init.vim ~/.config/nvim/init.vim
+ln -s $DOTFILES/config/nvim/spell ~/.config/nvim/spell
+ln -s $DOTFILES/config/termite/termite.config ~/.config/termite/config
 
 echo "All linked up."
 

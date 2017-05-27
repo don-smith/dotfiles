@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+launchsteam() {
+  # Location of games: ~/.local/share/Steam/steamapps/common
+  LD_PRELOAD='/usr/$LIB/libstdc++.so.6 /usr/$LIB/libgcc_s.so.1 /usr/$LIB/libxcb.so.1 /usr/$LIB/libgpg-error.so' steam
+}
+
+xmind() {
+  export SWT_GTK3=0; ~/Downloads/xmind/XMind_amd64/XMind
+}
+

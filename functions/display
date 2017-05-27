@@ -1,0 +1,41 @@
+#!/bin/zsh
+
+setdisplay() {
+  [[ $1 == a* ]] && pos="--above"
+  [[ $1 == b* ]] && pos="--below"
+  [[ $1 == l* ]] && pos="--left-of"
+  [[ $1 == r* ]] && pos="--right-of"
+  [[ $1 == s* ]] && pos="--same-as"
+
+  xrandr --addmode $2 1920x1080
+  xrandr --output $2 --mode 1920x1080 $pos eDP-1
+}
+
+dp() {
+  setdisplay $1 DP-1
+}
+
+hdmi() {
+  setdisplay $1 HDMI-2
+}
+
+trimon() {
+  xrandr --addmode eDP-1 1920x1080
+  xrandr --addmode DP-1 1920x1080
+  xrandr --addmode HDMI-2 1920x1080
+  xrandr --output DP-1 --mode 1920x1080 --pos 0x0
+  xrandr --output HDMI-2 --mode 1920x1080 --pos 1920x0
+  xrandr --output eDP-1 --mode 1920x1080 --pos 960x1080
+}
+
+mirror() {
+  dp same
+  hdmi same
+}
+
+brightness() {
+  # cat /sys/class/backlight/intel_backlight/max_brightness
+  # cat /sys/class/backlight/intel_backlight/actual_brightness
+  sudo tee /sys/class/backlight/intel_backlight/brightness <<< $1
+}
+

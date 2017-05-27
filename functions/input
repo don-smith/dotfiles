@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+fixi() {
+  xmodmap ~/.Xmodmap
+}
+
+tpon() {
+  echo "TouchPad turned on"
+  synclient TouchPadOff=0
+  synclient TapButton1=1
+  synclient VertScrollDelta=-60
+  synclient HorizScrollDelta=-60
+}
+
+tpoff() {
+  echo "TouchPad turned off"
+  synclient TouchPadOff=1
+  synclient TapButton1=0
+  echo "pointer = default" | xmodmap -
+}
+

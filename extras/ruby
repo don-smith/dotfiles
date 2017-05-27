@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+# Wire up Chruby
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+

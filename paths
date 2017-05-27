@@ -1,0 +1,11 @@
+# This file is sourced from $DOTFILES/home/.zshenv
+
+export PATH=$PATH:/home/don/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/home/don/.nvm/versions/node/v7.4.0/bin:/home/don/projects/go/bin:/usr/bin/vendor_perl:$GEM_HOME/bin:/home/don/.local/bin:$DOTFILES/bin
+
+# Java & Android
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
+# Rust
+export PATH=${PATH}:/home/don/.cargo/bin
+

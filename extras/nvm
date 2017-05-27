@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+export NVM_DIR="/home/don/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Automatically apply the designated node version based on the .nvmrc file
+autoload -U add-zsh-hook
+load-nvmrc() {
+  if [[ -f .nvmrc && -r .nvmrc  ]]; then
+    nvm use
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+

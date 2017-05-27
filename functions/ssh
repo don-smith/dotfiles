@@ -1,0 +1,30 @@
+#!/bin/zsh
+
+kill-ssh-agents() {
+  killall ssh-agent
+}
+
+gh() {
+  kill-ssh-agents
+  eval $(ssh-agent -s)
+  ssh-add ~/.ssh/github
+}
+
+gitlab() {
+  kill-ssh-agents
+  eval $(ssh-agent -s)
+  ssh-add ~/.ssh/gitlab
+}
+
+digo() {
+  kill-ssh-agents
+  eval $(ssh-agent -s)
+  ssh-add ~/.ssh/digital-ocean
+}
+
+ssbpub() {
+  kill-ssh-agents
+  eval $(ssh-agent -s)
+  ssh-add ~/.ssh/ssb-pub
+}
+

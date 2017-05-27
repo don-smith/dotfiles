@@ -1,0 +1,43 @@
+# Awesome sauce for the terminal!
+
+# Cleaning the palate
+alias c="clear"
+alias cl="c; l"
+alias cls="c; ls"
+
+# Terminal love
+alias ct="c; tre"
+alias tre="tree -a -C -I 'node_modules|.git' --dirsfirst"
+alias rmd="rm -fr"
+
+# Opening NeoVim
+alias v="nvim"
+alias vim="nvim"
+alias vp="v -p" # multiple files with tabs
+alias vd="v -d" # multiple files in diff mode
+
+# Gitting quicker
+alias git="hub"
+alias cgst="c; gst"
+alias gdc="gd --cached"
+alias gdr="git diff-tree --name-status -r"
+alias gll="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+
+# Opening config files
+alias paths="v $DOTFILES/paths"
+alias aliases="v $DOTFILES/aliases"
+alias zshrc="v $DOTFILES/home/.zshrc"
+alias zshenv="v $DOTFILES/home/.zshenv"
+alias zprofile="v $DOTFILES/home/.zprofile"
+alias vimrc="v $DOTFILES/config/nvim/init.vim"
+alias i3conf="v $DOTFILES/config/i3/i3.config"
+alias tmuxconf="v $DOTFILES/home/tmux.conf"
+alias termiteconf="v $DOTFILES/config/termite/termite.config"
+
+# Simple shortcuts
+alias t="npm test"
+alias py="python"
+alias bt="bluetoothctl"
+alias dc="docker-compose"
+alias dcr="docker-compose run"
+

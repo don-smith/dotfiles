@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+[[ -s "/home/don/.gvm/scripts/gvm" ]] && source "/home/don/.gvm/scripts/gvm"
+
