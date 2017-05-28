@@ -10,8 +10,6 @@ source $DOTFILES/aliases
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git nvm archlinux docker)
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # chruby not current installed
 # source $DOTFILES/extras/ruby
 
@@ -24,6 +22,8 @@ source $DOTFILES/extras/gvm
 source $DOTFILES/extras/prompt
 
 source $ZSH/oh-my-zsh.sh
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Turn on vi-mode by default
 bindkey -v
