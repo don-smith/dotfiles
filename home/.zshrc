@@ -1,11 +1,3 @@
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="hippy"
-
-bindkey "^R" history-incremental-search-backward
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -18,7 +10,7 @@ source $DOTFILES/aliases
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git nvm archlinux docker)
 
-source $ZSH/oh-my-zsh.sh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # chruby not current installed
 # source $DOTFILES/extras/ruby
@@ -29,4 +21,10 @@ source $DOTFILES/extras/nvm
 
 source $DOTFILES/extras/gvm
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $DOTFILES/extras/prompt
+
+source $ZSH/oh-my-zsh.sh
+
+# Turn on vi-mode by default
+bindkey -v
+
