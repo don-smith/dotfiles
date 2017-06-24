@@ -1,4 +1,4 @@
-# This file is sourced from $DOTFILES/home/.zshenv
+# This file is sourced from $DOTFILES/home/.zprofile
 
 # The usual suspects
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin

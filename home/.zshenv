@@ -16,5 +16,3 @@ export ANDROID_HOME=~/Android/Sdk
 # Ruby
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 
-source $DOTFILES/paths
-
