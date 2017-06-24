@@ -31,7 +31,7 @@ alias zshenv="v $DOTFILES/home/.zshenv"
 alias zprofile="v $DOTFILES/home/.zprofile"
 alias vimrc="v $DOTFILES/config/nvim/init.vim"
 alias i3conf="v $DOTFILES/config/i3/i3.config"
-alias tmuxconf="v $DOTFILES/home/tmux.conf"
+alias tmuxconf="v $DOTFILES/home/.tmux.conf"
 alias termiteconf="v $DOTFILES/config/termite/termite.config"
 
 # Simple shortcuts
