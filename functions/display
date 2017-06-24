@@ -1,5 +1,13 @@
 #!/bin/zsh
 
+setwallpaper() {
+  feh --bg-scale ~/images/wallpaper/arch-pattern.png
+  #feh --bg-scale ~/images/wallpaper/arch-wall.png
+  #feh --bg-scale ~/images/wallpaper/arch-blue.png
+  #feh --bg-scale ~/images/wallpaper/arch-teal.png
+  #feh --bg-scale ~/images/wallpaper/arch-grain.png
+}
+
 setdisplay() {
   [[ $1 == a* ]] && pos="--above"
   [[ $1 == b* ]] && pos="--below"
@@ -9,6 +17,7 @@ setdisplay() {
 
   xrandr --addmode $2 1920x1080
   xrandr --output $2 --mode 1920x1080 $pos eDP1
+  setwallpaper
 }
 
 dp() {
