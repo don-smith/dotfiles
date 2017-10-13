@@ -10,6 +10,7 @@ rm ~/.Xmodmap
 rm ~/.gitconfig
 rm ~/.tmux.conf
 rm ~/.tern-config
+rm ~/.eslintrc.json
 rm ~/.gitignore_global
 
 rm ~/.config/i3/config
@@ -28,6 +29,7 @@ ln -s $DOTFILES/home/.Xmodmap ~/.Xmodmap
 ln -s $DOTFILES/home/.gitconfig ~/.gitconfig
 ln -s $DOTFILES/home/.tmux.conf ~/.tmux.conf
 ln -s $DOTFILES/home/.tern-config ~/.tern-config
+ln -s $DOTFILES/home/.eslintrc.json ~/.eslintrc.json
 ln -s $DOTFILES/home/.gitignore_global ~/.gitignore_global
 
 ln -s $DOTFILES/config/i3/i3.config ~/.config/i3/config
