@@ -10,6 +10,12 @@ gh() {
   ssh-add ~/.ssh/github
 }
 
+bb() {
+  kill-ssh-agents
+  eval $(ssh-agent -s)
+  ssh-add ~/.ssh/bitbucket-hypr
+}
+
 gitlab() {
   kill-ssh-agents
   eval $(ssh-agent -s)

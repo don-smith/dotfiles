@@ -9,6 +9,10 @@ export PATH=$PATH:$HOME/.local/bin
 # DOTFILES
 export PATH=$PATH:$DOTFILES/bin
 
+# CrashPlan Pro
+export PATH=$PATH:/opt/crashplan/bin
+# Desktop app is ./CrashPlanDesktop
+
 # Node/nvm
 export PATH=$PATH:$HOME/.nvm/versions/node/v7.4.0/bin
 

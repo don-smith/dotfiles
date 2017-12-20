@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-xmind() {
-  export SWT_GTK3=0; ~/Downloads/xmind/XMind_amd64/XMind
-}
+# xmind() {
+#   export SWT_GTK3=0; ~/Downloads/xmind/XMind_amd64/XMind
+# }
 

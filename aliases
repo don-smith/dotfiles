@@ -8,7 +8,8 @@ alias cls="c; ls"
 # Terminal love
 alias ct="c; tre"
 alias tre="tree -a -C -I 'node_modules|.git' --dirsfirst"
-alias rmd="rm -fr"
+alias rmd="trash"
+alias rm="trash"
 
 # Opening NeoVim
 alias v="nvim"

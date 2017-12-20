@@ -5,6 +5,7 @@ export REPLYTO="don@dezent.io"
 export LANG=en_NZ.UTF-8
 export LC_MESSAGES="C"
 export VISUAL="nvim"
+export EDITOR="nvim"
 
 # Remove the 0.4s vi-mode lag
 export KEYTIMEOUT=1

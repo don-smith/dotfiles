@@ -65,7 +65,7 @@ colorscheme Tomorrow-Night
 let g:airline_theme='tomorrow'
 :let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let g:airline#extensions#tmuxline#enabled = 0
-" make background transparent 
+" make background transparent
 autocmd VimEnter * hi Normal guibg=NONE ctermbg=NONE
 
 " Spell checking
@@ -88,9 +88,9 @@ let g:ctrlp_max_depth = 20
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_typescript_checkers = ['tsuquyomi']
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 let g:syntastic_mode_map = {'mode': 'active'}
-" For JavaScript, use standard if it doesn't find an .eslintrc file
-autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') != '' ? ['eslint'] : ['standard']
 
 " Neoformat
 let g:neoformat_try_formatprg = 1
