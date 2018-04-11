@@ -10,7 +10,12 @@
 npm install --global \
   dat \
   eslint \
-  ferment \
+  eslint-config-standard \
+  eslint-plugin-standard \
+  eslint-plugin-promise \
+  eslint-plugin-import \
+  eslint-plugin-react \
+  eslint-plugin-node \
   git-ssb \
   gitbook-cli \
   mup \
@@ -18,5 +23,4 @@ npm install --global \
   prettier \
   react-native-cli \
   scuttlebot@latest \
-  standard \
-  vmd
+  markdown-preview

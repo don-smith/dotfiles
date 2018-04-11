@@ -27,4 +27,3 @@ export PATH=$PATH:$HOME/.cargo/bin
 
 # Perl
 export PATH=$PATH:/usr/bin/vendor_perl
-
