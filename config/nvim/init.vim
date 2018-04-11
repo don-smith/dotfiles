@@ -93,6 +93,10 @@ let g:neoformat_try_formatprg = 1
 
 " Tsuquyomi (TypeScript plugin)
 let g:tsuquyomi_disable_quickfix = 1
+let g:tsuquyomi_disable_default_mappings = 1
+nmap <C-]> <Plug>(TsuquyomiDefinition)
+nmap <C-&> <Plug>(TsuquyomiGoBack)
+nmap <C-^> <Plug>(TsuquyomiReferences)
 
 " NERDCommenter (use <leader>c<space>)
 let g:NERDSpaceDelims = 1
