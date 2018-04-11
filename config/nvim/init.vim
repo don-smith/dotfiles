@@ -18,7 +18,6 @@ Plug 'Quramy/tsuquyomi'
 Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeTabsToggle' }
-Plug 'scrooloose/syntastic'
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
@@ -30,6 +29,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeTabsToggle' }
 call plug#end()
 
@@ -84,13 +84,9 @@ let g:ctrlp_working_path_mode = 2
 let g:ctrlp_max_files = 20000
 let g:ctrlp_max_depth = 20
 
-" Syntastic
-let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_typescript_checkers = ['tsuquyomi']
-let g:syntastic_mode_map = {'mode': 'active'}
-" For JavaScript, use standard if it doesn't find an .eslintrc file
-autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') != '' ? ['eslint'] : ['standard']
+" Async Lint Engine (ALE)
+let g:airline#extensions#ale#enabled = 1
+let g:ale_linters = {'javascript': ['eslint'], 'typescript': ['tslint']}
 
 " Neoformat
 let g:neoformat_try_formatprg = 1
