@@ -65,7 +65,7 @@ colorscheme Tomorrow-Night
 let g:airline_theme='tomorrow'
 :let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let g:airline#extensions#tmuxline#enabled = 0
-" make background transparent 
+" make background transparent
 autocmd VimEnter * hi Normal guibg=NONE ctermbg=NONE
 
 " Spell checking

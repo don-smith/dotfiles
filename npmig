@@ -2,7 +2,7 @@
 
 # This installs all of the global npm packages I use.
 # This is also a good place to maintain the list :)
-# Many of these are needed by vim scripts.
+# Some of these are needed by vim scripts.
 
 # To install modules to a new node version:
 # nvm install v9.2.0 --reinstall-packages-from=v7.4.0
