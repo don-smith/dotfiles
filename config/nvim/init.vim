@@ -7,6 +7,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'edkolev/tmuxline.vim'
+Plug 'elmcast/elm-vim'
 Plug 'fatih/vim-go'
 Plug 'flazz/vim-colorschemes'
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
@@ -87,9 +88,13 @@ let g:ctrlp_max_depth = 20
 " Async Lint Engine (ALE)
 let g:airline#extensions#ale#enabled = 1
 let g:ale_linters = {'javascript': ['eslint'], 'typescript': ['tslint']}
+let g:ale_fixers = {}
+let g:ale_fixers['typescript'] = ['prettier']
+let g:ale_fix_on_save = 1
 
-" Neoformat
-let g:neoformat_try_formatprg = 1
+" For Elm, use elm-vim instead of vim-polyglot
+let g:polyglot_disabled = ['elm', 'graphql']
+" adding graphql is a workaround for https://github.com/sheerun/vim-polyglot/issues/303
 
 " Tsuquyomi (TypeScript plugin)
 let g:tsuquyomi_disable_quickfix = 1
@@ -141,12 +146,6 @@ nnoremap <C-n> :call NumberToggle()<CR>
 " Move lines up and down
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
-
-" Toggle Syntastic
-map <leader>st :SyntasticToggleMode<CR>
-
-" An easy escape
-:imap jj <Esc>
 
 " NERDTree
 let g:NERDTreeWinSize = 44

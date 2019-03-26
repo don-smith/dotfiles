@@ -1,6 +1,7 @@
 [user]
 	name = Don Smith
 	email = don@antiantonym.com
+	signingkey = BA0D331DDF479ACFF1A6518B8BCCC82A92C4F664
 [credential]
 	helper = cache
 [push]
@@ -10,6 +11,7 @@
 [alias]
   d = difftool
   m = mergetool
+	iam = !git-iam
 [diff]
   tool = vimdiff
 [difftool "vimdiff"]
@@ -24,3 +26,5 @@
   path = nvim
 [clean]
   requireForce = false
+[users]
+	url = https://raw.githubusercontent.com/enspiral-dev-academy/students/master/auckland.json

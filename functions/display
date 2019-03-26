@@ -25,7 +25,7 @@ dp() {
 }
 
 hdmi() {
-  setdisplay $1 HDMI2
+  setdisplay $1 HDMI1
 }
 
 brightness() {

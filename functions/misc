@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+watchmore() {
+  sudo -i
+  sudo echo 1048576 > /proc/sys/fs/inotify/max_user_watches
+  exit
+}
+
+getip() {
+  docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $1
+}
+
+copyid() {
+  docker ps | awk 'match($2, /'$1'/){printf $1}' | xclip -selection c
+}
+
+mkdircd () {
+  mkdir -p "$@" && eval cd "\"\$$#\""
+}

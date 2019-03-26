@@ -5,7 +5,7 @@ recordscreen() {
 }
 
 recordwebcam() {
-  ffmpeg -thread_queue_size 1024 -f alsa -i hw:0 -thread_queue_size 32 -i /dev/video1 -c:v libx264 -c:a aac "$1-cam.mkv"
+  ffmpeg -thread_queue_size 1024 -f alsa -i hw:0 -thread_queue_size 32 -input_format mjpeg -i /dev/video0 -c:v libx264 -c:a aac "$1-cam.mkv"
 }
 
 recordboth() {
