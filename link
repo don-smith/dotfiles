@@ -2,7 +2,7 @@
 
 # Remove existing links
 
-rm ~/.xinitrc
+# rm ~/.xinitrc
 rm ~/.zshenv
 rm ~/.zprofile
 rm ~/.zshrc
@@ -21,7 +21,7 @@ rm ~/.config/termite/config
 
 # Create symbolic links
 
-ln -s $DOTFILES/home/.xinitrc ~/.xinitrc
+# ln -s $DOTFILES/home/.xinitrc ~/.xinitrc
 ln -s $DOTFILES/home/.zshenv ~/.zshenv
 ln -s $DOTFILES/home/.zprofile ~/.zprofile
 ln -s $DOTFILES/home/.zshrc ~/.zshrc
@@ -36,7 +36,7 @@ ln -s $DOTFILES/config/i3/i3.config ~/.config/i3/config
 ln -s $DOTFILES/config/i3status/i3status.config ~/.config/i3status/config
 ln -s $DOTFILES/config/nvim/init.vim ~/.config/nvim/init.vim
 ln -s $DOTFILES/config/nvim/spell ~/.config/nvim/spell
-ln -s $DOTFILES/config/termite/termite.config ~/.config/termite/config
+ln -s $DOTFILES/config/termite/config ~/.config/termite/config
 
 echo "All linked up."
 

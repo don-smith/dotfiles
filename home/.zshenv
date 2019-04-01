@@ -1,4 +1,4 @@
-export DOTFILES=~/projects/dotfiles
+export DOTFILES=/home/don/projects/dotfiles
 export ZSH=/home/don/.oh-my-zsh
 export REPLYTO="don@dezent.io"
 
@@ -18,4 +18,4 @@ export ANDROID_HOME=~/Android/Sdk
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 
 # asciinema.org
-export ASCIINEMA_INSTALL_ID=$(cat $HOME/.config/asciinema/install-id)
+# export ASCIINEMA_INSTALL_ID=$(cat $HOME/.config/asciinema/install-id)

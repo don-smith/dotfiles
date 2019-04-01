@@ -9,7 +9,7 @@
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 [options]
-font = Source Code Pro for Powerline Regular 12
+# font = Source Code Pro for Powerline Regular 12
 mouse_autohide = true
 
 [colors]

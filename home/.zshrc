@@ -30,4 +30,3 @@ source /usr/share/fzf/completion.zsh
 
 # Turn on vi-mode by default
 bindkey -v
-

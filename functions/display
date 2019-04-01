@@ -17,7 +17,7 @@ setdisplay() {
 
   xrandr --addmode $2 1920x1080
   xrandr --output $2 --mode 1920x1080 $pos eDP1
-  setwallpaper
+  # setwallpaper
 }
 
 dp() {
