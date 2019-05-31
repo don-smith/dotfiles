@@ -35,6 +35,6 @@ brightness() {
   echo "cat /sys/class/backlight/intel_backlight/actual_brightness"
 }
 
-scroff() {
+sss() {
   xset dpms force standby
 }

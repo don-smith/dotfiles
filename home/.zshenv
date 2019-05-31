@@ -13,6 +13,9 @@ export KEYTIMEOUT=1
 # Java & Android
 export JAVA_HOME=/usr/lib/jvm/default
 export ANDROID_HOME=~/Android/Sdk
+export ANDROID_SDK_ROOT=~/Android/Sdk
+export ANDROID_SDK_HOME=~/Android/Sdk
+export ANDROID_AVD_HOME=~/.android/avd
 
 # Ruby
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
