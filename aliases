@@ -7,6 +7,8 @@ alias cls="c; ls"
 
 # Terminal love
 alias ct="c; tre"
+alias rr="rm -rf"
+alias sizeof="du -shx"
 alias tre="tree -a -C -I 'node_modules|.git' --dirsfirst"
 
 # Opening NeoVim
@@ -42,3 +44,6 @@ alias bt="bluetoothctl"
 alias dc="docker-compose"
 alias dcr="docker-compose run"
 alias ejson="ejson --keydir ~/.ejson/keys"
+
+# Applications
+alias b2="backblaze-b2"

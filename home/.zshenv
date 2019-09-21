@@ -10,6 +10,9 @@ export EDITOR="nvim"
 # Remove the 0.4s vi-mode lag
 export KEYTIMEOUT=1
 
+# For OS-wide theme support for QT5 apps
+export QT_QPA_PLATFORMTHEME=qt5ct
+
 # Java & Android
 export JAVA_HOME=/usr/lib/jvm/default
 export ANDROID_HOME=~/Android/Sdk

@@ -16,6 +16,9 @@ export PATH=$PATH:/opt/crashplan/bin
 # Node/nvm
 export PATH=$PATH:$HOME/.nvm/versions/node/v7.4.0/bin
 
+# Anaconda/Python
+export PATH=$PATH:$HOME/anaconda3/bin
+
 # Go
 export PATH=$PATH:$HOME/projects/go/bin
 

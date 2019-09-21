@@ -22,6 +22,7 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeTabsToggle' }
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'supercollider/scvim',
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
@@ -167,6 +168,12 @@ nmap <leader>du :diffupdate<CR>
 nmap <leader>dg :diffget 
 nmap <leader>dp :diffput 
 nmap <leader>ge :Gedit 
+
+" SuperCollider (SCVim)
+let g:scFlash = 1
+nmap <leader>l :call SClang_line()<CR>
+nmap <leader>b :call SClang_block()<CR>
+nmap <leader>ss :call SClangHardstop()<CR>
 
 " Splits
 nmap <leader>h :sp<CR>
