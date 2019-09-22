@@ -33,7 +33,6 @@ ln -s $DOTFILES/home/.Xmodmap ~/.Xmodmap
 ln -s $DOTFILES/home/.gitconfig ~/.gitconfig
 ln -s $DOTFILES/home/.tmux.conf ~/.tmux.conf
 ln -s $DOTFILES/home/.tern-config ~/.tern-config
-ln -s $DOTFILES/home/.eslintrc.json ~/.eslintrc.json
 ln -s $DOTFILES/home/.gitignore_global ~/.gitignore_global
 
 mkdir -p ~/.config/i3 ~/.config/i3status ~/.config/nvim ~/.config/termite ~/.config/conky
