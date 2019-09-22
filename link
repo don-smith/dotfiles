@@ -33,6 +33,8 @@ ln -s $DOTFILES/home/.tern-config ~/.tern-config
 ln -s $DOTFILES/home/.eslintrc.json ~/.eslintrc.json
 ln -s $DOTFILES/home/.gitignore_global ~/.gitignore_global
 
+mkdir -p ~/.config/i3 ~/.config/i3status ~/.config/nvim ~/.config/termite ~/.config/conky
+
 ln -s $DOTFILES/config/i3/i3.config ~/.config/i3/config
 ln -s $DOTFILES/config/i3status/i3status.config ~/.config/i3status/config
 ln -s $DOTFILES/config/nvim/init.vim ~/.config/nvim/init.vim
