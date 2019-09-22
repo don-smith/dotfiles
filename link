@@ -5,7 +5,6 @@ export DOTFILES=~/projects/dotfiles
 
 # Remove existing links
 
-# rm ~/.xinitrc
 rm ~/.zshenv
 rm ~/.zprofile
 rm ~/.zshrc
@@ -25,7 +24,6 @@ rm ~/.config/termite/config
 
 # Create symbolic links
 
-# ln -s $DOTFILES/home/.xinitrc ~/.xinitrc
 ln -s $DOTFILES/home/.zshenv ~/.zshenv
 ln -s $DOTFILES/home/.zprofile ~/.zprofile
 ln -s $DOTFILES/home/.zshrc ~/.zshrc
