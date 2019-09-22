@@ -14,6 +14,7 @@ rm ~/.eslintrc.json
 rm ~/.gitignore_global
 
 rm ~/.config/i3/config
+rm ~/.config/conky/conky.conf
 rm ~/.config/i3status/config
 rm ~/.config/nvim/init.vim
 rm ~/.config/nvim/spell
@@ -37,6 +38,7 @@ ln -s $DOTFILES/config/i3status/i3status.config ~/.config/i3status/config
 ln -s $DOTFILES/config/nvim/init.vim ~/.config/nvim/init.vim
 ln -s $DOTFILES/config/nvim/spell ~/.config/nvim/spell
 ln -s $DOTFILES/config/termite/config ~/.config/termite/config
+ln -s $DOTFILES/config/conky/conky.conf ~/.config/conky/conky.conf
 
 echo "All linked up."
 
