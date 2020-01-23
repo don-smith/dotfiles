@@ -3,6 +3,7 @@ filetype plugin indent on
 " Plugins
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
@@ -50,6 +51,7 @@ set tabstop=2
 set wrap
 set linebreak
 set number
+set hidden
 set textwidth=0
 set wrapmargin=0
 set nowritebackup
@@ -85,6 +87,15 @@ set wildignore+=node_modules
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_max_files = 20000
 let g:ctrlp_max_depth = 20
+
+" Language Protocol Servers
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ 'python': ['/usr/local/bin/pyls'],
+    \ }
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 
 " Async Lint Engine (ALE)
 let g:airline#extensions#ale#enabled = 1
