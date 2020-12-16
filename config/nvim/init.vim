@@ -8,7 +8,6 @@ set modelines=0
 set backspace=2
 set shiftwidth=2
 set clipboard+=unnamedplus
-set synmaxcol=128
 set scrolloff=5
 set laststatus=2
 set tabstop=2
@@ -28,6 +27,11 @@ set termguicolors
 set guifont="Source Code Pro for Powerline":h14
 
 let mapleader = ','
+
+augroup FiletypeGroup
+  autocmd!
+  au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+augroup END
 
 let g:airline_theme='tomorrow'
 :let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -63,8 +67,7 @@ nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 " Async Lint Engine (ALE)
 let g:airline#extensions#ale#enabled = 1
 let g:ale_linters = {'javascript': ['eslint'], 'typescript': ['tslint']}
-let g:ale_fixers = {}
-let g:ale_fixers['typescript'] = ['prettier']
+let g:ale_fixers = {'javascript': ['eslint', 'prettier'], 'jsx': ['eslint', 'prettier'], 'markdown': ['prettier'], 'typescript': ['prettier']}
 let g:ale_fix_on_save = 1
 
 " For Elm, use elm-vim instead of vim-polyglot
@@ -78,7 +81,7 @@ nmap <C-]> <Plug>(TsuquyomiDefinition)
 nmap <C-&> <Plug>(TsuquyomiGoBack)
 nmap <C-^> <Plug>(TsuquyomiReferences)
 
-" NERDCommenter (use <leader>c<space>)
+" NERDCommenter (use <leader>c<space> or <leader>ci)
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
 
@@ -97,6 +100,12 @@ autocmd FileType javascript set formatprg=prettier\ --stdin
 
 " Exit terminal mode quicker/easier
 :tnoremap <C-[> <C-\><C-n>
+
+" A faster save file
+"map <C-[><C-[> :w<CR>
+
+" A faster escape
+:imap jj <Esc>
 
 " For moving up/down in paragraphs and in edit mode
 nnoremap j gj
@@ -125,7 +134,7 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 " NERDTree
 let g:NERDTreeWinSize = 44
 let g:NERDTreeShowHidden = 1
-map <C-t> :NERDTreeTabsToggle<CR>
+map <C-t> :NERDTreeToggle<CR>
 
 " Ack shortcut
 nnoremap <leader>a :Ack!<Space>
@@ -156,19 +165,21 @@ nmap <leader>v :vsp<CR>
 " Format the entire file
 nmap <leader>fef :Neoformat<CR>
 
-" Quit current file
-nmap <leader>q :bd!<CR>
-
 " Unhighlight previous search
 nnoremap <ESC> :noh<RETURN><ESC>
 
 " Tab between buffers
-noremap <tab> :bn<CR>
+noremap <tab> :bn<CR><C-t>
 
-" Switch tabs
-nmap <leader>t :tabnew<CR>
-nmap <S-l> :tabnext<CR>
-nmap <S-h> :tabprevious<CR>
+" Quit current file
+nmap <leader>q <C-t>:bd!<CR><C-t><C-l>
+
+" Create a new buffer/file
+nmap <leader>t :new<CR><C-w>o<C-t><C-l>
+
+" Switch buffers
+nmap <S-l> :bn<CR>
+nmap <S-h> :bp<CR>
 
 " Open the current markdown file in vmd
 nmap <leader>md :!vmd % &<CR>
@@ -193,17 +204,15 @@ Plug 'fatih/vim-go'
 Plug 'flazz/vim-colorschemes'
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 Plug 'jiangmiao/auto-pairs'
-Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
 Plug 'mattn/emmet-vim'
 Plug 'mileszs/ack.vim'
 Plug 'Quramy/tsuquyomi'
 Plug 'sbdchd/neoformat'
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeTabsToggle' }
+Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdtree' | Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'supercollider/scvim',
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
@@ -213,7 +222,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
-Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeTabsToggle' }
 call plug#end()
 
 colorscheme Tomorrow-Night
