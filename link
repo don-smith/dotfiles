@@ -1,8 +1,10 @@
 #!/usr/bin/env sh
 
+# Ensure this path is correct before running this script
+export DOTFILES=~/projects/dotfiles
+
 # Remove existing links
 
-rm ~/.xinitrc
 rm ~/.zshenv
 rm ~/.zprofile
 rm ~/.zshrc
@@ -14,6 +16,7 @@ rm ~/.eslintrc.json
 rm ~/.gitignore_global
 
 rm ~/.config/i3/config
+rm ~/.config/conky/conky.conf
 rm ~/.config/i3status/config
 rm ~/.config/nvim/init.vim
 rm ~/.config/nvim/spell
@@ -21,7 +24,6 @@ rm ~/.config/termite/config
 
 # Create symbolic links
 
-ln -s $DOTFILES/home/.xinitrc ~/.xinitrc
 ln -s $DOTFILES/home/.zshenv ~/.zshenv
 ln -s $DOTFILES/home/.zprofile ~/.zprofile
 ln -s $DOTFILES/home/.zshrc ~/.zshrc
@@ -29,14 +31,16 @@ ln -s $DOTFILES/home/.Xmodmap ~/.Xmodmap
 ln -s $DOTFILES/home/.gitconfig ~/.gitconfig
 ln -s $DOTFILES/home/.tmux.conf ~/.tmux.conf
 ln -s $DOTFILES/home/.tern-config ~/.tern-config
-ln -s $DOTFILES/home/.eslintrc.json ~/.eslintrc.json
 ln -s $DOTFILES/home/.gitignore_global ~/.gitignore_global
+
+mkdir -p ~/.config/i3 ~/.config/i3status ~/.config/nvim ~/.config/termite ~/.config/conky
 
 ln -s $DOTFILES/config/i3/i3.config ~/.config/i3/config
 ln -s $DOTFILES/config/i3status/i3status.config ~/.config/i3status/config
 ln -s $DOTFILES/config/nvim/init.vim ~/.config/nvim/init.vim
 ln -s $DOTFILES/config/nvim/spell ~/.config/nvim/spell
-ln -s $DOTFILES/config/termite/termite.config ~/.config/termite/config
+ln -s $DOTFILES/config/termite/config ~/.config/termite/config
+ln -s $DOTFILES/config/conky/conky.conf ~/.config/conky/conky.conf
 
 echo "All linked up."
 
