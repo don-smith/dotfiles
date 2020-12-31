@@ -7,3 +7,6 @@ SPACESHIP_VI_MODE_SHOW=false
 SPACESHIP_DIR_TRUNC=0 # show all
 SPACESHIP_BATTERY_SHOW=false
 SPACESHIP_DIR_TRUNC_REPO=false
+
+autoload -U promptinit; promptinit
+prompt spaceship
