@@ -5,6 +5,7 @@ export DOTFILES=~/projects/dotfiles
 
 # Remove existing links
 
+rm ~/.xinitrc
 rm ~/.zshenv
 rm ~/.zprofile
 rm ~/.zshrc
@@ -20,9 +21,11 @@ rm ~/.config/i3status/config
 rm ~/.config/nvim/init.vim
 rm ~/.config/nvim/spell
 rm ~/.config/termite/config
+rm ~/.config/starship.toml
 
 # Create symbolic links
 
+ln -s $DOTFILES/home/.xinitrc ~/.xinitrc
 ln -s $DOTFILES/home/.zshenv ~/.zshenv
 ln -s $DOTFILES/home/.zprofile ~/.zprofile
 ln -s $DOTFILES/home/.zshrc ~/.zshrc
@@ -40,5 +43,6 @@ ln -s $DOTFILES/config/i3status/i3status.config ~/.config/i3status/config
 ln -s $DOTFILES/config/nvim/init.vim ~/.config/nvim/init.vim
 ln -s $DOTFILES/config/nvim/spell ~/.config/nvim/spell
 ln -s $DOTFILES/config/termite/config ~/.config/termite/config
+ln -s $DOTFILES/config/starship.toml ~/.config/starship.toml
 
 echo "All linked up."
