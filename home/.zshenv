@@ -13,6 +13,12 @@ export KEYTIMEOUT=1
 # For OS-wide theme support for QT5 apps
 export QT_QPA_PLATFORMTHEME=qt5ct
 
+# Set theme for GTK 2 apps
+export GTK_THEME="Arc-Darker"
+
+# Enable a GUI prompt when using SSH
+export SSH_ASKPASS=ssh-askpass
+
 # Java & Android
 export JAVA_HOME=/usr/lib/jvm/default
 export ANDROID_HOME=~/Android/Sdk

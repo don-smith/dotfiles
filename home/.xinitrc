@@ -41,6 +41,3 @@ fi
 
 # Start i3
 exec i3
-
-# Start polkit authentication agent
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
