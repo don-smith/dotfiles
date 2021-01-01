@@ -1,36 +1,22 @@
 #!/bin/zsh
 
-kill-ssh-agents() {
-  killall ssh-agent
-}
-
 gh() {
-  kill-ssh-agents
-  eval $(ssh-agent -s)
   ssh-add ~/.ssh/id_github
 }
 
 bb() {
-  kill-ssh-agents
-  eval $(ssh-agent -s)
-  ssh-add ~/.ssh/bitbucket-hypr
+  ssh-add ~/.ssh/id_bitbucket
 }
 
 gitlab() {
-  kill-ssh-agents
-  eval $(ssh-agent -s)
-  ssh-add ~/.ssh/gitlab
+  ssh-add ~/.ssh/id_gitlab
 }
 
 digo() {
-  kill-ssh-agents
-  eval $(ssh-agent -s)
-  ssh-add ~/.ssh/digital-ocean
+  ssh-add ~/.ssh/id_digital_ocean
 }
 
 ssbpub() {
-  kill-ssh-agents
-  eval $(ssh-agent -s)
-  ssh-add ~/.ssh/ssb-pub
+  ssh-add ~/.ssh/id_ssb_pub
 }
 

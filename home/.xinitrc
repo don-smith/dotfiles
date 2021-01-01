@@ -31,8 +31,13 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# Set desktop wallpaper
-feh --bg-scale ~/images/wallpaper/arch-pattern.png
+# Start the ssh-agent so it uses the same socket for all keys
+eval $(ssh-agent -s)
+export SSH_AUTH_SOCK=~/.ssh/ssh-agent.$HOSTNAME.sock
+ssh-add -l 2>/dev/null >/dev/null
+if [ $? -ge 2 ]; then
+  ssh-agent -a "$SSH_AUTH_SOCK" >/dev/null
+fi
 
 # Start i3
 exec i3
