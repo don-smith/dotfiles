@@ -28,13 +28,6 @@ hdmi() {
   setdisplay $1 HDMI1
 }
 
-brightness() {
-  sudo tee /sys/class/backlight/intel_backlight/brightness <<< $1
-  echo "These may prove helpful:"
-  echo "cat /sys/class/backlight/intel_backlight/max_brightness"
-  echo "cat /sys/class/backlight/intel_backlight/actual_brightness"
-}
-
 sss() {
   xset dpms force standby
 }

@@ -7,7 +7,7 @@ kill-ssh-agents() {
 gh() {
   kill-ssh-agents
   eval $(ssh-agent -s)
-  ssh-add ~/.ssh/github
+  ssh-add ~/.ssh/id_github
 }
 
 bb() {

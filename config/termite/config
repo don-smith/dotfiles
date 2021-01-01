@@ -9,6 +9,7 @@
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 [options]
+font = FiraCode Nerd Font Mono Regular 14
 # font = Source Code Pro for Powerline Regular 12
 mouse_autohide = true
 
