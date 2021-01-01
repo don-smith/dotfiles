@@ -1,4 +1,4 @@
 [directory]
-truncation_length = 2
-truncation_symbol = "~/"
+truncation_length = 8
+truncation_symbol = ".../"
 truncate_to_repo = false
