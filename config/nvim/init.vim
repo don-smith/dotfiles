@@ -1,41 +1,5 @@
 filetype plugin indent on
 
-" Plugins
-call plug#begin()
-Plug 'airblade/vim-gitgutter'
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'easymotion/vim-easymotion'
-Plug 'edkolev/tmuxline.vim'
-Plug 'elmcast/elm-vim'
-Plug 'fatih/vim-go'
-Plug 'flazz/vim-colorschemes'
-Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
-Plug 'jiangmiao/auto-pairs'
-Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
-Plug 'mattn/emmet-vim'
-Plug 'mileszs/ack.vim'
-Plug 'Quramy/tsuquyomi'
-Plug 'sbdchd/neoformat'
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeTabsToggle' }
-Plug 'sheerun/vim-polyglot'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'supercollider/scvim',
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-obsession'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'w0rp/ale'
-Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeTabsToggle' }
-call plug#end()
-
 syntax on
 
 set number
@@ -65,7 +29,6 @@ set guifont="Source Code Pro for Powerline":h14
 
 let mapleader = ','
 
-colorscheme Tomorrow-Night
 let g:airline_theme='tomorrow'
 :let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let g:airline#extensions#tmuxline#enabled = 0
@@ -216,3 +179,41 @@ noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 " Open and source Neovim config from inside Neovim
 command! Config :e ~/.config/nvim/init.vim
 command! Source :source ~/.config/nvim/init.vim
+
+" Plugins
+call plug#begin()
+Plug 'airblade/vim-gitgutter'
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'edkolev/tmuxline.vim'
+Plug 'elmcast/elm-vim'
+Plug 'fatih/vim-go'
+Plug 'flazz/vim-colorschemes'
+Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+Plug 'jiangmiao/auto-pairs'
+Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
+Plug 'mattn/emmet-vim'
+Plug 'mileszs/ack.vim'
+Plug 'Quramy/tsuquyomi'
+Plug 'sbdchd/neoformat'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeTabsToggle' }
+Plug 'sheerun/vim-polyglot'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'supercollider/scvim',
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeTabsToggle' }
+call plug#end()
+
+colorscheme Tomorrow-Night
