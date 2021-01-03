@@ -10,6 +10,7 @@
 
 [options]
 # font = Source Code Pro for Powerline Regular 12
+font = Fira Code Regular 12
 mouse_autohide = true
 
 [colors]

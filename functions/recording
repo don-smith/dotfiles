@@ -1,15 +1,19 @@
 #!/bin/zsh
 
+recordscreenonly() {
+  ffmpeg -thread_queue_size 256 -f x11grab -s 1920x1080 -r 25 -i $DISPLAY -c:v libx264 "$1-screen.mkv"
+}
+
 recordscreen() {
-  ffmpeg -thread_queue_size 32 -f x11grab -s 1920x1080 -r 25 -i $DISPLAY -c:v libx264 "$1-screen.mkv"
+  ffmpeg -thread_queue_size 2048 -f alsa -c:a pcm_s24le -i hw:2,0 -thread_queue_size 256 -f x11grab -s 1920x1080 -r 25 -i $DISPLAY -c:v libx264 "$1-screen.mkv"
 }
 
 recordwebcam() {
-  ffmpeg -thread_queue_size 1024 -f alsa -i hw:0 -thread_queue_size 32 -input_format mjpeg -i /dev/video0 -c:v libx264 -c:a aac "$1-cam.mkv"
+  ffmpeg -thread_queue_size 1024 -f alsa -i hw:0 -thread_queue_size 256 -input_format mjpeg -i /dev/video0 -c:v libx264 -c:a aac "$1-cam.mkv"
 }
 
 recordboth() {
-  ffmpeg -thread_queue_size 1024 -f alsa -i hw:0 -thread_queue_size 32 -f x11grab -s 1920x1080 -r 25 -i $DISPLAY -f v4l2 -input_format mjpeg -i /dev/video0 -filter_complex "[2]scale=iw/2:ih/2 [pip]; [1][pip] overlay=main_w-overlay_w:0" -c:v libx264 -c:a aac "$1.mkv"
+  ffmpeg -thread_queue_size 1024 -f alsa -i hw:0 -thread_queue_size 256 -f x11grab -s 1920x1080 -r 25 -i $DISPLAY -f v4l2 -input_format mjpeg -i /dev/video0 -filter_complex "[2]scale=iw/2:ih/2 [pip]; [1][pip] overlay=main_w-overlay_w:0" -c:v libx264 -c:a aac "$1.mkv"
 }
 
 processrecording() {

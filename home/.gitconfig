@@ -1,6 +1,6 @@
 [user]
-	name = Don Smith
-	email = don@antiantonym.com
+  name = Don Smith
+  email = hi@dons.dev
 	signingkey = BA0D331DDF479ACFF1A6518B8BCCC82A92C4F664
 [credential]
 	helper = cache
@@ -27,4 +27,6 @@
 [clean]
   requireForce = false
 [users]
-	url = https://raw.githubusercontent.com/enspiral-dev-academy/students/master/auckland.json
+	url = https://bit.ly/hk-2021
+[pull]
+	rebase = false

@@ -30,3 +30,6 @@ export PATH=$PATH:$HOME/.cargo/bin
 
 # Perl
 export PATH=$PATH:/usr/bin/vendor_perl
+
+# Deno
+export PATH=$PATH:$DENO_INSTALL/bin:$PATH

@@ -23,5 +23,8 @@ export ANDROID_AVD_HOME=~/.android/avd
 # Ruby
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 
+# Deno
+export DENO_INSTALL="/home/don/.deno"
+
 # asciinema.org
 # export ASCIINEMA_INSTALL_ID=$(cat $HOME/.config/asciinema/install-id)
