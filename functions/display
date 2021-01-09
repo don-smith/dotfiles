@@ -37,4 +37,5 @@ brightness() {
 
 sss() {
   xset dpms force standby
+  clear
 }
