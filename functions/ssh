@@ -1,9 +1,9 @@
 #!/bin/zsh
 
-export SSH_AUTH_SOCK=~/.ssh/ssh-agent.$HOSTNAME.sock
-
 gh() {
-  eval $(ssh-agent -s -a $SSH_AUTH_SOCK)
+  local sock=~/.ssh/github.sock
+  rm $sock
+  eval $(ssh-agent -s -a $sock)
   ssh-add ~/.ssh/id_github
 }
 
