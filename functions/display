@@ -30,4 +30,5 @@ hdmi() {
 
 sss() {
   xset dpms force standby
+  clear
 }
