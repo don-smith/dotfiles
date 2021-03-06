@@ -10,6 +10,7 @@ alias ct="c; tre"
 alias rr="rm -rf"
 alias sizeof="du -shx"
 alias tre="tree -a -C -I 'node_modules|.git' --dirsfirst"
+alias dz="tmux kill-session -t 0"
 
 # Opening NeoVim
 alias v="nvim"
