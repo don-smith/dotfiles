@@ -49,3 +49,4 @@ alias ejson="ejson --keydir ~/.ejson/keys"
 
 # Applications
 alias b2="backblaze-b2"
+alias holonix="nix-shell https://holochain.love"

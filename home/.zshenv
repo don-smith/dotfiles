@@ -28,3 +28,4 @@ export DENO_INSTALL="/home/don/.deno"
 
 # asciinema.org
 # export ASCIINEMA_INSTALL_ID=$(cat $HOME/.config/asciinema/install-id)
+if [ -e /home/don/.nix-profile/etc/profile.d/nix.sh ]; then . /home/don/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

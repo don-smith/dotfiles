@@ -31,6 +31,9 @@ source /usr/share/fzf/completion.zsh
 # Turn on vi-mode by default
 bindkey -v
 
+# Invoke the keychain (expects ~/.ssh/github)
+eval $(keychain --eval --quiet github)
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/don/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
