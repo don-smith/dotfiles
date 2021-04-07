@@ -1,5 +1,9 @@
 #!/bin/zsh
 
+eval $(keychain --eval --quiet --noask github)
+
+# Shouldn't need the following lines because of the previous line
+
 gh() {
   ssh-add ~/.ssh/github
 }
