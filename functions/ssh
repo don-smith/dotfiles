@@ -1,25 +1,22 @@
 #!/bin/zsh
 
 gh() {
-  local sock=~/.ssh/github.sock
-  rm $sock
-  eval $(ssh-agent -s -a $sock)
-  ssh-add ~/.ssh/id_github
+  ssh-add ~/.ssh/github
 }
 
 bb() {
-  ssh-add ~/.ssh/id_bitbucket
+  ssh-add ~/.ssh/bitbucket
 }
 
 gitlab() {
-  ssh-add ~/.ssh/id_gitlab
+  ssh-add ~/.ssh/gitlab
 }
 
 digo() {
-  ssh-add ~/.ssh/id_digital_ocean
+  ssh-add ~/.ssh/digital_ocean
 }
 
 ssbpub() {
-  ssh-add ~/.ssh/id_ssb_pub
+  ssh-add ~/.ssh/ssb_pub
 }
 
