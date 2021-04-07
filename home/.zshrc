@@ -23,26 +23,11 @@ source $DOTFILES/extras/prompt
 
 source $ZSH/oh-my-zsh.sh
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+#source /usr/share/fzf/key-bindings.zsh
+#source /usr/share/fzf/completion.zsh
 
 # Turn on vi-mode by default
 bindkey -v
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/don/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/don/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/don/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/don/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 

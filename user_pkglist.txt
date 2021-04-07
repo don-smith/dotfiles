@@ -1,0 +1,102 @@
+# Core
+#--------------------------------
+openssh
+keychain
+dmenu-frecency-git
+pamac-manager
+bluez
+pulseaudio-bluetooth
+i3-scrot
+i3exit
+neovim
+python-neovim
+xclip
+tmux
+hub
+tree
+unzip
+powerline
+python-pip
+zsh
+zsh-completions
+zsh-fast-syntax-highlighting
+ruby
+starship
+udiskie
+polkit
+lxqt-policykit
+spideroak-one
+spideroak-systemd-git
+
+# Tools
+#--------------------------------
+ibus-typing-booster
+epdfview
+wool
+# woeusb
+
+# Apps
+#--------------------------------
+vlc
+qbittorrent
+krita
+viewnoir
+openshot
+shotcut
+# figma-linux
+# gimp
+# chromium
+# obs-studio
+
+# Fonts
+#--------------------------------
+ttf-nerd-fonts-input
+nerd-fonts-fira-code
+nerd-fonts-source-code-pro
+nerd-fonts-anonymous-pro
+
+# Communications
+#--------------------------------
+# nordvpn-bin
+# zoom
+# discord
+# slack-desktop
+
+# Dev tools
+#--------------------------------
+# nvm
+# typescript
+# docker
+# docker-compose
+# visual-studio-code-bin
+# asciinema
+# heroku-cli
+# insomnia
+# insomnia-designer-bin
+# sqlitebrowser
+# android-studio
+# aws-cli
+# rstudio-desktop-bin
+# weka
+# godot-bin
+
+# 3D modelling/printing
+#--------------------------------
+# blender
+# prusa-slicer
+# spacenavd
+# spnavcfg
+# openscad
+
+# Gaming
+#--------------------------------
+# steam-native
+# dwarffortress
+
+# Audio
+#--------------------------------
+# audacity
+# qjackctl
+# bitwig-studio
+# supercollider
+# vcvrack-bin
