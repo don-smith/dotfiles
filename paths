@@ -3,6 +3,12 @@
 # The usual suspects
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin
 
+# Homebrew
+export PATH=$PATH:/opt/homebrew/bin
+
+# LLVM (for Haskell/Tidal Cycles)
+export PATH=$PATH:/opt/homebrew/opt/llvm/bin
+
 # User executables
 export PATH=$PATH:$HOME/.local/bin
 
@@ -22,11 +28,14 @@ export PATH=$PATH:$HOME/projects/go/bin
 export PATH=$PATH:$GEM_HOME/bin
 
 # Android
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+# export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Rust
 export PATH=$PATH:$HOME/.cargo/bin
 
 # Perl
 export PATH=$PATH:/usr/bin/vendor_perl
+
+# Python
+export PATH=$PATH:/Users/don/Library/Python/3.8/bin

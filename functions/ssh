@@ -1,26 +1,6 @@
 #!/bin/zsh
 
-eval $(keychain --eval --quiet --noask github)
-
-# Shouldn't need the following lines because of the previous line
-
-gh() {
-  ssh-add ~/.ssh/github
+do-ssh () {
+  eval "$(ssh-agent -s)"
+  ssh-add --apple-load-keychain
 }
-
-bb() {
-  ssh-add ~/.ssh/bitbucket
-}
-
-gitlab() {
-  ssh-add ~/.ssh/gitlab
-}
-
-digo() {
-  ssh-add ~/.ssh/digital_ocean
-}
-
-ssbpub() {
-  ssh-add ~/.ssh/ssb_pub
-}
-
